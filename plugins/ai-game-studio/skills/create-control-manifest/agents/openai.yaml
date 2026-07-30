@@ -1,0 +1,6 @@
+interface:
+  display_name: "Create Control Manifest"
+  short_description: "After architecture is complete, produces a flat actionable"
+  default_prompt: "Use $ai-game-studio:create-control-manifest to after architecture is complete, produces a flat actionable for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

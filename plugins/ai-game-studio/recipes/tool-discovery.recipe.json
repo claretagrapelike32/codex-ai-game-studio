@@ -1,0 +1,107 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "tool-discovery",
+  "title": "Discover a compatible game-production toolchain",
+  "description": "A reversible, evidence-producing workflow for discover a compatible game-production toolchain.",
+  "inputs": [
+    "project_path",
+    "target_platforms",
+    "budget",
+    "commercial_intent"
+  ],
+  "ordered_stages": [
+    {
+      "order": 1,
+      "id": "detect",
+      "action": "Read project, OS, engine, DCC, GPU, and existing MCP metadata without mutation."
+    },
+    {
+      "order": 2,
+      "id": "filter",
+      "action": "Filter candidates by license, platform, hardware, application, and security constraints."
+    },
+    {
+      "order": 3,
+      "id": "compare",
+      "action": "Compare compatible candidates by capability, quality, cost, performance, and limitations."
+    },
+    {
+      "order": 4,
+      "id": "plan",
+      "action": "Produce one digest-bound transaction with exact pins, permissions, backups, and rollback."
+    },
+    {
+      "order": 5,
+      "id": "confirm",
+      "action": "Wait for explicit human confirmation before any installation or configuration change."
+    }
+  ],
+  "required_capabilities": [
+    "tool-discovery"
+  ],
+  "expected_artifacts": [
+    "environment-report.json",
+    "toolchain-comparison.md",
+    "transaction-plan.json"
+  ],
+  "quality_gates": [
+    {
+      "id": "rights",
+      "description": "Verify rights, consent, code, weights, datasets, output terms, and generation provenance.",
+      "human_required": true
+    },
+    {
+      "id": "technical-format",
+      "description": "Validate formats and domain-specific technical constraints.",
+      "human_required": false
+    },
+    {
+      "id": "visual-temporal",
+      "description": "Check visual identity and temporal consistency across relevant views and frames.",
+      "human_required": false
+    },
+    {
+      "id": "runtime-budget",
+      "description": "Check memory, frame time, draw calls, load time, and asset budgets.",
+      "human_required": false
+    },
+    {
+      "id": "playability",
+      "description": "Run interaction and playability smoke tests in the target runtime.",
+      "human_required": false
+    },
+    {
+      "id": "regression-evidence",
+      "description": "Store screenshots, artifacts, logs, versions, and comparison evidence.",
+      "human_required": false
+    },
+    {
+      "id": "human-approval",
+      "description": "Require human approval before replacing any source or production asset.",
+      "human_required": true
+    },
+    {
+      "id": "specific-1",
+      "description": "No unresolved license may be presented as commercially cleared.",
+      "human_required": false
+    },
+    {
+      "id": "specific-2",
+      "description": "Only one MCP server per host application may be active.",
+      "human_required": false
+    }
+  ],
+  "fallbacks": [
+    "Use the checked-in offline catalog when GitHub metadata is unavailable.",
+    "Offer a verified native or hosted alternative when hardware is incompatible."
+  ],
+  "provenance_outputs": [
+    "source-input-hashes.json",
+    "generation-settings.json",
+    "dependency-pins.json",
+    "quality-evidence/",
+    "human-approval.json"
+  ],
+  "mutation_policy": "plan-confirmed-digest-before-apply"
+}

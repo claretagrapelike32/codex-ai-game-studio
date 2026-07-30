@@ -1,0 +1,29 @@
+{
+  "name": "ai-game-studio-unreal",
+  "version": "1.0.0",
+  "description": "An opt-in, pinned Unreal Engine MCP adapter and safety workflow for Codex AI Game Studio.",
+  "author": {"name": "frabcd", "url": "https://github.com/frabcd"},
+  "homepage": "https://frabcd.github.io/codex-ai-game-studio/packs/unreal/",
+  "repository": "https://github.com/frabcd/codex-ai-game-studio",
+  "license": "MIT",
+  "keywords": ["unreal-engine", "mcp", "game-development", "codex"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "AI Game Studio · Unreal",
+    "shortDescription": "Plan and operate one pinned Unreal MCP safely.",
+    "longDescription": "Detects Unreal projects, plans the IvanMurzak Unreal MCP adapter, checks conflicts and permissions, and requires confirmation before setup or editor writes.",
+    "developerName": "frabcd",
+    "category": "Developer Tools",
+    "capabilities": ["Unreal project detection", "Pinned Unreal MCP routing", "Health checks and rollback"],
+    "websiteURL": "https://frabcd.github.io/codex-ai-game-studio/packs/unreal/",
+    "privacyPolicyURL": "https://frabcd.github.io/codex-ai-game-studio/privacy/",
+    "termsOfServiceURL": "https://frabcd.github.io/codex-ai-game-studio/terms/",
+    "brandColor": "#08C7F7",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "logoDark": "./assets/icon.png",
+    "screenshots": [],
+    "defaultPrompt": "Use $ai-game-studio-unreal:setup-unreal to inspect this Unreal project and propose a pinned, reversible integration without changing anything yet."
+  }
+}

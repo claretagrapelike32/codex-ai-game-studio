@@ -1,0 +1,6 @@
+interface:
+  display_name: "Quick Design"
+  short_description: "Lightweight design spec for small changes — tuning"
+  default_prompt: "Use $ai-game-studio:quick-design to lightweight design spec for small changes — tuning for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Skill Test"
+  short_description: "Validate skill files for structural compliance and"
+  default_prompt: "Use $ai-game-studio:skill-test to validate skill files for structural compliance and for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

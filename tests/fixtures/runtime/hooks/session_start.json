@@ -1,0 +1,9 @@
+{
+  "session_id": "thr_fixture",
+  "transcript_path": "C:/private/transcript.jsonl",
+  "cwd": "__PROJECT__",
+  "hook_event_name": "SessionStart",
+  "model": "gpt-fixture",
+  "permission_mode": "default",
+  "source": "startup"
+}

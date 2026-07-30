@@ -1,0 +1,1312 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/catalog-snapshot.schema.json",
+  "schema_version": "1.0.0",
+  "snapshot_date": "2026-07-30",
+  "source": "Approximate values explicitly present in the verified landscape; missing fields remain null until a reviewed refresh.",
+  "records": [
+    {
+      "id": "0x0funky-agent-sprite-forge",
+      "stars": 3500,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "3dtopia-3dtopia-xl",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "3dtopia-lgm",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "a16z-infra-ai-town",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "adriankhl-godot-llm",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "ahujasid-blender-mcp",
+      "stars": 25100,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "aiuniai-unique3d",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "akikurisu-next-gen-dialogue",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "amidos2006-gym-pcgrl",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "amtarr-comfyui-texturealchemy",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "anil-matcha-awesome-ai-game-generation",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "anklebreaker-studio-unity-mcp-plugin",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "anklebreaker-studio-unity-mcp-server",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "aseprite-aseprite",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "ashawkey-intex",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "ashawkey-stable-dreamfusion",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "assimp-assimp",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "automatic1111-stable-diffusion-webui",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "aws-solutions-library-samples-guidance-for-dynamic-game-npc-dialogue-on-aws",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "baai-agents-cradle",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "balrog-ai-balrog",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "blendi-remade-sprite-sheet-creator",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "buaacyw-meshanything",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "buaacyw-meshanythingv2",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "carson-katri-dream-textures",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "chaofengc-awesome-image-quality-assessment",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "chaofengc-iqa-pytorch",
+      "stars": 3300,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "charmed-ai-tilemapgen",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "chasemetoyer-gameplay-vision-llm",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "codedpro-agentic-game-factory",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "coding-solo-godot-mcp",
+      "stars": 5000,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "comfy-org-comfyui",
+      "stars": 122900,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "coplaydev-unity-mcp",
+      "stars": 13000,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "coqui-ai-tts",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "danielgatis-rembg",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "declare-lab-tango",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "dinghuanghao-openword",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "donchitos-claude-code-game-studios",
+      "stars": 23500,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "dreamgaussian-dreamgaussian",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "dweam-team-world-arcade",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "ece1786-2023-animyth",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "edbeeching-godot-rl-agents",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "eloialonso-diamond",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "enigmalabsai-multiverse",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "envy-ai-ai-rpg",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "ericguo5513-momask-codes",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "etched-ai-open-oasis",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "eyamans-texel-studio",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "facebookresearch-actionmesh",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "facebookresearch-ai4animationpy",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "facebookresearch-audiocraft",
+      "stars": 23500,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "facebookresearch-segment-anything",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "fanghua-yu-supir",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "farama-foundation-vizdoom",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "fennaraofficial-fennara-godot-ai",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "gabotechs-musicgpt",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "gair-nlp-agencybench",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "galbanese09-spritebrew",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "gamedev-skills-awesome-gamedev-agent-skills",
+      "stars": 369,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "gamegen-x-gamegen-x",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "garris-backstopjs",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "genorca-unreal-mcp",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "google-draco",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "graphdeco-inria-gaussian-splatting",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "haoheliu-audioldm2",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "horizonrobotics-embodiedgen",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "hzwer-practical-rife",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "idealo-image-quality-assessment",
+      "stars": null,
+      "archived": true,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "instantx-research-instantid",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "ivanmurzak-godot-mcp",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "ivanmurzak-unity-mcp",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "ivanmurzak-unreal-mcp",
+      "stars": 17,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "jarrentwu1031-animateanymesh",
+      "stars": 316,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "jingyunliang-swinir",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "kaist-ami-paint-it",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "khronosgroup-gltf-validator",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "khronosgroup-ktx-software",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "klingairesearch-gamefactory",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "kovenyu-wonderworld",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "laion-ai-aesthetic-predictor",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "leigest519-opengame",
+      "stars": 2800,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "lllyasviel-controlnet",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "lllyasviel-ic-light",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "llm-lab-org-generative-ai-for-character-animation-survey",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "lmgame-org-gamingagent",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "mapeditor-tiled",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "matrix-agent-awesome-agentic-world-modeling",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "mesh2motion-mesh2motion-app",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "microsoft-mineworld",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "microsoft-playwright",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "microsoft-textworld",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "microsoft-trellis",
+      "stars": 13300,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "minll-skyrimnet-gameplugin",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "mrforexample-comfyui-3d-pack",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "myshell-ai-openvoice",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "natfii-unrealclaude",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "nerfstudio-project-nerfstudio",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "nv-tlabs-llama-mesh",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "open-mmlab-mmpose",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "openai-plugins",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "openai-point-e",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "openai-procgen",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "openai-shap-e",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "openmotionlab-motiongpt",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "orama-interactive-pixelorama",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "pasta-devs-marinara-engine",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "princeton-vl-infinigen",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "q-future-q-align",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "roblox-cube",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "rvc-project-retrieval-based-voice-conversion-webui",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "sakalond-stablegen",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "schrum2-mariodiffusion",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "sczhou-codeformer",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "seed3d-puppeteer",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "sensengao-oneworld",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "shyamsn97-mario-gpt",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "simoninithomas-awesome-ai-tools-for-game-dev",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "skyworkai-matrix-3d",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "skyworkai-matrix-game",
+      "stars": 2300,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "stability-ai-stable-fast-3d",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "stepfun-ai-step1x-3d",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "sudo-ai-3d-zero123plus",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "summerengine-summer-engine-agent",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "tencent-hunyuan-hunyuan3d-2",
+      "stars": 14400,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "tencent-hunyuan-hunyuan3d-2-1",
+      "stars": 3800,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "tencent-hunyuan-hunyuanvideo-foley",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "tencent-hunyuan-hunyuanworld-1-0",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "tencent-hunyuan-hy-world-2-0",
+      "stars": 2400,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "tencent-hunyuan-hy-worldplay",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "tencent-playcoder",
+      "stars": 42,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "tencentarc-gfpgan",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "tencentarc-instantmesh",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "tencentarc-photomaker",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "tencentarc-pixal3d",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "thedivergentai-gd-agentic-skills",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "thegrayeminence-material-manager",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "threestudio-project-threestudio",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "thu-lyj-lab-t3bench",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "tomyud1-godot-mcp",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "tothebeginning-pulid",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "undreamai-llmunity",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "unity-technologies-ml-agents",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "vast-ai-research-anigen",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "vast-ai-research-seqtex",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "vast-ai-research-triposg",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "vast-ai-research-triposr",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "vast-ai-research-unirig",
+      "stars": 1700,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "willibrandon-pixel-mcp",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "worldwonderer-novel-to-game",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "xandergos-terrain-diffusion",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "xianfei-sysmocap",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "xinntao-real-esrgan",
+      "stars": 36300,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "approximate-source-snapshot"
+    },
+    {
+      "id": "xpixelgroup-depictqa",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "xpixelgroup-hat",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "xxlong0-wonder3d",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "yuan-manx-ai-game-devtools",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "yuan-manx-sparklabs",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "yuvalkirstain-pickscore",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "yyeboah-awesome-text-to-3d",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "zai-org-imagereward",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "zeux-meshoptimizer",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "ziyang-xie-worldgen",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    },
+    {
+      "id": "zzzyuqing-dreammat",
+      "stars": null,
+      "archived": null,
+      "latest_release": null,
+      "last_activity": null,
+      "retrieval": "not-recorded"
+    }
+  ]
+}

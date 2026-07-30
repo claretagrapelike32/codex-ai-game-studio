@@ -1,0 +1,6 @@
+interface:
+  display_name: "Content Audit"
+  short_description: "Audit GDD-specified content counts against implemented"
+  default_prompt: "Use $ai-game-studio:content-audit to audit GDD-specified content counts against implemented for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

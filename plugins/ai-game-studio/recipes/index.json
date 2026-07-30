@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "recipe_count": 12,
+  "recipes": [
+    {
+      "id": "tool-discovery",
+      "title": "Discover a compatible game-production toolchain",
+      "path": "tool-discovery.recipe.json"
+    },
+    {
+      "id": "prompt-to-game",
+      "title": "Prompt to playable vertical slice",
+      "path": "prompt-to-game.recipe.json"
+    },
+    {
+      "id": "sprite-animation",
+      "title": "Generate and validate a 2D sprite animation",
+      "path": "sprite-animation.recipe.json"
+    },
+    {
+      "id": "asset-3d-generation",
+      "title": "Generate an engine-ready 3D asset",
+      "path": "asset-3d-generation.recipe.json"
+    },
+    {
+      "id": "pbr-material-generation",
+      "title": "Generate and validate PBR materials",
+      "path": "pbr-material-generation.recipe.json"
+    },
+    {
+      "id": "rig-animation",
+      "title": "Rig, retarget, and validate animation",
+      "path": "rig-animation.recipe.json"
+    },
+    {
+      "id": "world-generation",
+      "title": "Generate a playable environment or procedural level",
+      "path": "world-generation.recipe.json"
+    },
+    {
+      "id": "npc-audio-generation",
+      "title": "Generate NPC dialogue, quests, voice, music, and sound",
+      "path": "npc-audio-generation.recipe.json"
+    },
+    {
+      "id": "engine-automation",
+      "title": "Plan and run reversible engine automation",
+      "path": "engine-automation.recipe.json"
+    },
+    {
+      "id": "visual-qa",
+      "title": "Run multi-view visual and temporal QA",
+      "path": "visual-qa.recipe.json"
+    },
+    {
+      "id": "quality-enhancement",
+      "title": "Enhance assets without losing approved sources",
+      "path": "quality-enhancement.recipe.json"
+    },
+    {
+      "id": "existing-project-adoption",
+      "title": "Adopt the studio workflows in an existing game",
+      "path": "existing-project-adoption.recipe.json"
+    }
+  ]
+}

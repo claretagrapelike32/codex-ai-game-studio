@@ -1,0 +1,6 @@
+interface:
+  display_name: "Vertical Slice"
+  short_description: "Pre-Production validation — build a production-quality"
+  default_prompt: "Use $ai-game-studio:vertical-slice to pre-Production validation — build a production-quality for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

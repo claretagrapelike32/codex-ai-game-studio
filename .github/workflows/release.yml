@@ -1,0 +1,94 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Existing semantic version tag to publish, including v prefix
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+concurrency:
+  group: release-${{ github.ref }}-${{ inputs.version }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      CODEX_OFFICIAL_SKILLS_ROOT: ${{ github.workspace }}/.official/codex/codex-rs/skills/src/assets/samples
+    steps:
+      - name: Check out tagged source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: ${{ inputs.version || github.ref }}
+      - name: Check out pinned official validators
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: openai/codex
+          ref: 578c1b2230288104041e880a86d0f7f3a5ca6e47
+          path: .official/codex
+          persist-credentials: false
+          sparse-checkout: |
+            codex-rs/skills/src/assets/samples/plugin-creator
+            codex-rs/skills/src/assets/samples/skill-creator
+          sparse-checkout-cone-mode: false
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.11"
+      - name: Install validator parser dependency
+        run: python -m pip install PyYAML==6.0.3
+      - name: Resolve and verify tag
+        id: release
+        shell: bash
+        env:
+          REQUESTED_TAG: ${{ inputs.version || github.ref_name }}
+        run: |
+          if [[ ! "$REQUESTED_TAG" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]; then
+            echo "Invalid release tag: $REQUESTED_TAG" >&2
+            exit 1
+          fi
+          git rev-parse --verify "refs/tags/$REQUESTED_TAG"
+          echo "tag=$REQUESTED_TAG" >> "$GITHUB_OUTPUT"
+          echo "version=${REQUESTED_TAG#v}" >> "$GITHUB_OUTPUT"
+      - name: Validate release candidate
+        run: |
+          python tools/validate_repository.py
+          python tools/run_official_validators.py --require
+          python -m unittest discover -s tests -p "test_*.py" -v
+      - name: Build deterministic archives, checksums, and SBOM
+        run: python tools/build_release.py --version "${{ steps.release.outputs.version }}" --output dist
+      - name: Attest release artifacts
+        uses: actions/attest-build-provenance@e8998f949152b193b063cb0ec769d69d929409be # v2
+        with:
+          subject-path: dist/*
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: codex-ai-game-studio-${{ steps.release.outputs.version }}
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Publish GitHub release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" dist/* --clobber
+          else
+            gh release create "$RELEASE_TAG" dist/* --verify-tag --generate-notes --title "Codex AI Game Studio $RELEASE_TAG"
+          fi

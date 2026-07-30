@@ -1,0 +1,110 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "engine-automation",
+  "title": "Plan and run reversible engine automation",
+  "description": "A reversible, evidence-producing workflow for plan and run reversible engine automation.",
+  "inputs": [
+    "project_path",
+    "engine",
+    "requested_changes",
+    "test_target"
+  ],
+  "ordered_stages": [
+    {
+      "order": 1,
+      "id": "detect",
+      "action": "Read engine version, project state, existing MCP configuration, and repository status."
+    },
+    {
+      "order": 2,
+      "id": "plan",
+      "action": "Describe exact files, editor operations, permissions, backups, health checks, and rollback."
+    },
+    {
+      "order": 3,
+      "id": "confirm",
+      "action": "Require the human-confirmed plan digest before editor control or configuration mutation."
+    },
+    {
+      "order": 4,
+      "id": "apply",
+      "action": "Apply only scoped actions through one MCP server for the host application."
+    },
+    {
+      "order": 5,
+      "id": "verify",
+      "action": "Run editor health checks, tests, screenshots, and rollback rehearsal."
+    }
+  ],
+  "required_capabilities": [
+    "engine-control",
+    "asset-validation"
+  ],
+  "expected_artifacts": [
+    "engine-detection.json",
+    "transaction-plan.json",
+    "change-log.json",
+    "health-check.json",
+    "rollback-report.json"
+  ],
+  "quality_gates": [
+    {
+      "id": "rights",
+      "description": "Verify rights, consent, code, weights, datasets, output terms, and generation provenance.",
+      "human_required": true
+    },
+    {
+      "id": "technical-format",
+      "description": "Validate formats and domain-specific technical constraints.",
+      "human_required": false
+    },
+    {
+      "id": "visual-temporal",
+      "description": "Check visual identity and temporal consistency across relevant views and frames.",
+      "human_required": false
+    },
+    {
+      "id": "runtime-budget",
+      "description": "Check memory, frame time, draw calls, load time, and asset budgets.",
+      "human_required": false
+    },
+    {
+      "id": "playability",
+      "description": "Run interaction and playability smoke tests in the target runtime.",
+      "human_required": false
+    },
+    {
+      "id": "regression-evidence",
+      "description": "Store screenshots, artifacts, logs, versions, and comparison evidence.",
+      "human_required": false
+    },
+    {
+      "id": "human-approval",
+      "description": "Require human approval before replacing any source or production asset.",
+      "human_required": true
+    },
+    {
+      "id": "specific-1",
+      "description": "No mutation occurs before digest confirmation.",
+      "human_required": false
+    },
+    {
+      "id": "specific-2",
+      "description": "Only one active MCP server controls a given host application.",
+      "human_required": false
+    }
+  ],
+  "fallbacks": [
+    "Provide manual editor steps when no compatible MCP is available.",
+    "Disable the pack and restore backed-up configuration if health checks fail."
+  ],
+  "provenance_outputs": [
+    "source-input-hashes.json",
+    "generation-settings.json",
+    "dependency-pins.json",
+    "quality-evidence/",
+    "human-approval.json"
+  ],
+  "mutation_policy": "plan-confirmed-digest-before-apply"
+}

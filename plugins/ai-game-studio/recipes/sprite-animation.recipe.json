@@ -1,0 +1,111 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "sprite-animation",
+  "title": "Generate and validate a 2D sprite animation",
+  "description": "A reversible, evidence-producing workflow for generate and validate a 2d sprite animation.",
+  "inputs": [
+    "character_brief",
+    "style_reference",
+    "frame_count",
+    "engine_import_target"
+  ],
+  "ordered_stages": [
+    {
+      "order": 1,
+      "id": "spec",
+      "action": "Lock canvas, palette, silhouette, pivot, baseline, directions, and frame timing."
+    },
+    {
+      "order": 2,
+      "id": "generate",
+      "action": "Generate candidates with seed, model, prompt, and reference provenance."
+    },
+    {
+      "order": 3,
+      "id": "normalize",
+      "action": "Normalize transparency, bounds, alignment, palette, and frame dimensions."
+    },
+    {
+      "order": 4,
+      "id": "animate",
+      "action": "Assemble the loop and inspect temporal continuity at target speed."
+    },
+    {
+      "order": 5,
+      "id": "import",
+      "action": "Import a copy into the target engine and capture runtime evidence."
+    }
+  ],
+  "required_capabilities": [
+    "sprite-generation",
+    "image-generation",
+    "visual-quality"
+  ],
+  "expected_artifacts": [
+    "sprite-spec.json",
+    "frames/*.png",
+    "sprite-sheet.png",
+    "preview.gif",
+    "import-report.json"
+  ],
+  "quality_gates": [
+    {
+      "id": "rights",
+      "description": "Verify rights, consent, code, weights, datasets, output terms, and generation provenance.",
+      "human_required": true
+    },
+    {
+      "id": "technical-format",
+      "description": "Validate formats and domain-specific technical constraints.",
+      "human_required": false
+    },
+    {
+      "id": "visual-temporal",
+      "description": "Check visual identity and temporal consistency across relevant views and frames.",
+      "human_required": false
+    },
+    {
+      "id": "runtime-budget",
+      "description": "Check memory, frame time, draw calls, load time, and asset budgets.",
+      "human_required": false
+    },
+    {
+      "id": "playability",
+      "description": "Run interaction and playability smoke tests in the target runtime.",
+      "human_required": false
+    },
+    {
+      "id": "regression-evidence",
+      "description": "Store screenshots, artifacts, logs, versions, and comparison evidence.",
+      "human_required": false
+    },
+    {
+      "id": "human-approval",
+      "description": "Require human approval before replacing any source or production asset.",
+      "human_required": true
+    },
+    {
+      "id": "specific-1",
+      "description": "Alpha edges are clean and every frame shares a stable baseline.",
+      "human_required": false
+    },
+    {
+      "id": "specific-2",
+      "description": "Loop endpoints, timing, proportions, and identity remain consistent.",
+      "human_required": false
+    }
+  ],
+  "fallbacks": [
+    "Repair frames deterministically in Aseprite or Pixelorama.",
+    "Retain approved frames and regenerate only failing poses."
+  ],
+  "provenance_outputs": [
+    "source-input-hashes.json",
+    "generation-settings.json",
+    "dependency-pins.json",
+    "quality-evidence/",
+    "human-approval.json"
+  ],
+  "mutation_policy": "plan-confirmed-digest-before-apply"
+}

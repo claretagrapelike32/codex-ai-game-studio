@@ -1,0 +1,6 @@
+interface:
+  display_name: "Team Level"
+  short_description: "Orchestrate level design team: level-designer +"
+  default_prompt: "Use $ai-game-studio:team-level to orchestrate level design team: level-designer + for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

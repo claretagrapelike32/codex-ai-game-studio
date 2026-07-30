@@ -1,0 +1,6 @@
+interface:
+  display_name: "Retrospective"
+  short_description: "Generates a sprint or milestone retrospective by analyzing"
+  default_prompt: "Use $ai-game-studio:retrospective to generates a sprint or milestone retrospective by analyzing for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

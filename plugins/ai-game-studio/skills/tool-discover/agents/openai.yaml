@@ -1,0 +1,6 @@
+interface:
+  display_name: "Tool Discover"
+  short_description: "Find compatible generative game tools"
+  default_prompt: "Use $ai-game-studio:tool-discover to find licensed, hardware-compatible tools for this game-development need."
+policy:
+  allow_implicit_invocation: true

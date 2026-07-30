@@ -1,0 +1,29 @@
+{
+  "name": "ai-game-studio-unity",
+  "version": "1.0.0",
+  "description": "An opt-in, pinned Unity MCP adapter and safety workflow for Codex AI Game Studio.",
+  "author": {"name": "frabcd", "url": "https://github.com/frabcd"},
+  "homepage": "https://frabcd.github.io/codex-ai-game-studio/packs/unity/",
+  "repository": "https://github.com/frabcd/codex-ai-game-studio",
+  "license": "MIT",
+  "keywords": ["unity", "mcp", "game-development", "codex"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "AI Game Studio · Unity",
+    "shortDescription": "Plan and operate one pinned Unity MCP safely.",
+    "longDescription": "Detects Unity projects, plans the CoplayDev Unity MCP adapter, checks conflicts and permissions, and requires confirmation before setup or editor writes.",
+    "developerName": "frabcd",
+    "category": "Developer Tools",
+    "capabilities": ["Unity project detection", "Pinned Unity MCP routing", "Health checks and rollback"],
+    "websiteURL": "https://frabcd.github.io/codex-ai-game-studio/packs/unity/",
+    "privacyPolicyURL": "https://frabcd.github.io/codex-ai-game-studio/privacy/",
+    "termsOfServiceURL": "https://frabcd.github.io/codex-ai-game-studio/terms/",
+    "brandColor": "#08C7F7",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "logoDark": "./assets/icon.png",
+    "screenshots": [],
+    "defaultPrompt": "Use $ai-game-studio-unity:setup-unity to inspect this Unity project and propose a pinned, reversible integration without changing anything yet."
+  }
+}

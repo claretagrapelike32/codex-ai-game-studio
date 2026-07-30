@@ -1,0 +1,6 @@
+interface:
+  display_name: "Team Combat"
+  short_description: "Orchestrate the combat team: coordinates game-designer,"
+  default_prompt: "Use $ai-game-studio:team-combat to orchestrate the combat team: coordinates game-designer, for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

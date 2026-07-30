@@ -1,0 +1,6 @@
+interface:
+  display_name: "Qa Plan"
+  short_description: "Generate a QA test plan for a sprint or feature. Reads GDDs"
+  default_prompt: "Use $ai-game-studio:qa-plan to generate a QA test plan for a sprint or feature. Reads GDDs for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Set up Godot MCP"
+  short_description: "Propose one pinned Godot adapter"
+  default_prompt: "Use $ai-game-studio-godot:setup-godot to inspect this Godot project and propose one compatible pinned MCP adapter."
+policy:
+  allow_implicit_invocation: false

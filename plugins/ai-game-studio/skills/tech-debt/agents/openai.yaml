@@ -1,0 +1,6 @@
+interface:
+  display_name: "Tech Debt"
+  short_description: "Track, categorize, and prioritize technical debt across the"
+  default_prompt: "Use $ai-game-studio:tech-debt to track, categorize, and prioritize technical debt across the for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

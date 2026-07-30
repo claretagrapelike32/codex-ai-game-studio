@@ -1,0 +1,111 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "quality-enhancement",
+  "title": "Enhance assets without losing approved sources",
+  "description": "A reversible, evidence-producing workflow for enhance assets without losing approved sources.",
+  "inputs": [
+    "source_assets",
+    "defect_list",
+    "target_spec",
+    "replacement_policy"
+  ],
+  "ordered_stages": [
+    {
+      "order": 1,
+      "id": "preserve",
+      "action": "Hash and copy source assets into a read-only comparison set."
+    },
+    {
+      "order": 2,
+      "id": "plan",
+      "action": "Choose the smallest reversible enhancement for each measured defect."
+    },
+    {
+      "order": 3,
+      "id": "enhance",
+      "action": "Produce new candidates without overwriting originals."
+    },
+    {
+      "order": 4,
+      "id": "compare",
+      "action": "Generate before/after technical, visual, temporal, and runtime evidence."
+    },
+    {
+      "order": 5,
+      "id": "approve",
+      "action": "Replace production references only after explicit human approval."
+    }
+  ],
+  "required_capabilities": [
+    "restoration",
+    "visual-quality",
+    "asset-validation"
+  ],
+  "expected_artifacts": [
+    "source-hashes.json",
+    "enhanced/",
+    "before-after/",
+    "quality-report.json",
+    "replacement-plan.json"
+  ],
+  "quality_gates": [
+    {
+      "id": "rights",
+      "description": "Verify rights, consent, code, weights, datasets, output terms, and generation provenance.",
+      "human_required": true
+    },
+    {
+      "id": "technical-format",
+      "description": "Validate formats and domain-specific technical constraints.",
+      "human_required": false
+    },
+    {
+      "id": "visual-temporal",
+      "description": "Check visual identity and temporal consistency across relevant views and frames.",
+      "human_required": false
+    },
+    {
+      "id": "runtime-budget",
+      "description": "Check memory, frame time, draw calls, load time, and asset budgets.",
+      "human_required": false
+    },
+    {
+      "id": "playability",
+      "description": "Run interaction and playability smoke tests in the target runtime.",
+      "human_required": false
+    },
+    {
+      "id": "regression-evidence",
+      "description": "Store screenshots, artifacts, logs, versions, and comparison evidence.",
+      "human_required": false
+    },
+    {
+      "id": "human-approval",
+      "description": "Require human approval before replacing any source or production asset.",
+      "human_required": true
+    },
+    {
+      "id": "specific-1",
+      "description": "Originals remain recoverable and bit-identical.",
+      "human_required": false
+    },
+    {
+      "id": "specific-2",
+      "description": "Enhancement does not introduce identity drift, temporal artifacts, or budget regressions.",
+      "human_required": false
+    }
+  ],
+  "fallbacks": [
+    "Reject the candidate and retain the source asset.",
+    "Apply a deterministic editor correction instead of a generative enhancement."
+  ],
+  "provenance_outputs": [
+    "source-input-hashes.json",
+    "generation-settings.json",
+    "dependency-pins.json",
+    "quality-evidence/",
+    "human-approval.json"
+  ],
+  "mutation_policy": "plan-confirmed-digest-before-apply"
+}

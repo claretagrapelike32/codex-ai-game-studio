@@ -1,0 +1,6 @@
+interface:
+  display_name: "Material Texture Generate"
+  short_description: "Generate validated PBR material sets"
+  default_prompt: "Use $ai-game-studio:material-texture-generate to create and validate a tileable PBR material set."
+policy:
+  allow_implicit_invocation: true

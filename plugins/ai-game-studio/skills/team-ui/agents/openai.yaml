@@ -1,0 +1,6 @@
+interface:
+  display_name: "Team Ui"
+  short_description: "Orchestrate the UI team through the full UX pipeline: from"
+  default_prompt: "Use $ai-game-studio:team-ui to orchestrate the UI team through the full UX pipeline: from for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

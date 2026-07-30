@@ -1,0 +1,6 @@
+interface:
+  display_name: "Help"
+  short_description: "Analyzes what is done and the users query and offers advice"
+  default_prompt: "Use $ai-game-studio:help to show the most relevant workflows for this project's current stage."
+policy:
+  allow_implicit_invocation: true

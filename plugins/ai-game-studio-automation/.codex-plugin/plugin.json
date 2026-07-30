@@ -1,0 +1,36 @@
+{
+  "name": "ai-game-studio-automation",
+  "version": "1.0.0",
+  "description": "Opt-in Codex lifecycle hooks, agent materialization, scoped AGENTS.md generation, and Claude-project migration for AI Game Studio.",
+  "author": {
+    "name": "frabcd",
+    "url": "https://github.com/frabcd"
+  },
+  "homepage": "https://frabcd.github.io/codex-ai-game-studio/automation/",
+  "repository": "https://github.com/frabcd/codex-ai-game-studio",
+  "license": "MIT",
+  "keywords": ["codex-hooks", "agents-md", "game-development", "migration"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Game Studio Automation",
+    "shortDescription": "Opt-in hooks, project agents, rules, and migration.",
+    "longDescription": "Adds reviewable Codex hooks and reversible project setup. It never installs agents, writes AGENTS.md, or migrates a project until a plan digest is explicitly confirmed.",
+    "developerName": "frabcd",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Codex lifecycle hooks",
+      "49 project agent templates",
+      "Scoped AGENTS.md generation",
+      "Claude-to-Codex migration"
+    ],
+    "websiteURL": "https://frabcd.github.io/codex-ai-game-studio/automation/",
+    "privacyPolicyURL": "https://frabcd.github.io/codex-ai-game-studio/privacy/",
+    "termsOfServiceURL": "https://frabcd.github.io/codex-ai-game-studio/terms/",
+    "brandColor": "#7C5CFC",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "logoDark": "./assets/icon.png",
+    "screenshots": [],
+    "defaultPrompt": "Use $ai-game-studio-automation:setup-automation to inspect this repository, show the exact automation files you propose, and wait for my confirmation."
+  }
+}

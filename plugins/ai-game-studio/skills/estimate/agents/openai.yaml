@@ -1,0 +1,6 @@
+interface:
+  display_name: "Estimate"
+  short_description: "Estimates task effort by analyzing complexity, dependencies,"
+  default_prompt: "Use $ai-game-studio:estimate to estimates task effort by analyzing complexity, dependencies, for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

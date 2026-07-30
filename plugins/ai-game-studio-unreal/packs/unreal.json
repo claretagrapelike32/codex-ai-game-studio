@@ -1,0 +1,96 @@
+{
+  "id": "unreal",
+  "plugin": "ai-game-studio-unreal",
+  "host_application": "Unreal Editor",
+  "supported_os": [
+    "Windows",
+    "Darwin",
+    "Linux"
+  ],
+  "supported_architectures": [
+    "amd64",
+    "x86_64",
+    "arm64",
+    "aarch64"
+  ],
+  "upstream": {
+    "repository": "IvanMurzak/Unreal-MCP",
+    "url": "https://github.com/IvanMurzak/Unreal-MCP",
+    "ref": "9cb45a06e487f91d56556308de48e6ef6fa90b35",
+    "license": "Apache-2.0",
+    "verified_at": "2026-07-30"
+  },
+  "alternatives": [
+    {
+      "repository": "GenOrca/unreal-mcp",
+      "url": "https://github.com/GenOrca/unreal-mcp",
+      "ref": "f7986db239516aa4299ddc6f54d713253bd82631",
+      "license": "Apache-2.0",
+      "active": false,
+      "selection_note": "Compare Python tooling, Blueprint coverage, packaging, and local-server requirements before substitution."
+    }
+  ],
+  "requirements": {
+    "host": "Unreal Engine 5 project",
+    "runtimes": [
+      "Node.js for the upstream CLI",
+      "engine C++ toolchain for source installs"
+    ],
+    "credentials": [
+      "UNREAL_MCP_BRIDGE_PATH when using a source checkout"
+    ]
+  },
+  "permissions": [
+    "read and write the selected Unreal project and editor content",
+    "spawn a user-approved local MCP executable and editor bridge",
+    "localhost IPC and optional remote/cloud network",
+    "execute high-trust editor console, reflection, Python, and build operations when explicitly requested"
+  ],
+  "health_checks": [
+    "validate project selection and executable SHA-256",
+    "confirm a .uproject and engine association",
+    "perform a read-only ping after the user starts Unreal and its bridge"
+  ],
+  "uninstall": [
+    "plan pack disable unreal",
+    "remove or disable the Unreal editor plugin only after separate confirmation",
+    "never ship the remote-control plugin enabled unintentionally"
+  ],
+  "rollback": [
+    "restore project.json and lock.json from the transaction backup",
+    "restore any replaced host selection",
+    "restore editor plugin files from their separately planned backup"
+  ],
+  "schema_version": 1,
+  "version": "1.0.0",
+  "distribution": "local-codex-marketplace",
+  "activation": {
+    "mode": "confirmed-transaction-only",
+    "project_state": ".ai-game-studio/project.json",
+    "lock_file": ".ai-game-studio/lock.json",
+    "single_server_per_host": true
+  },
+  "command_arguments": [
+    "--pack",
+    "unreal"
+  ],
+  "conflicts": [
+    "host:unreal"
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/IvanMurzak/Unreal-MCP/archive/9cb45a06e487f91d56556308de48e6ef6fa90b35.zip",
+      "ref": "9cb45a06e487f91d56556308de48e6ef6fa90b35",
+      "automatic": false,
+      "expected_size_bytes": null,
+      "reason": "External source reference; download only after proposal confirmation and license review."
+    }
+  ],
+  "adapter": {
+    "transport": "stdio",
+    "launcher": "scripts/mcp_adapter.py",
+    "shell": false,
+    "external_executable_must_be_absolute": true,
+    "external_executable_sha256_required": true
+  }
+}

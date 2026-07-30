@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review All Gdds"
+  short_description: "Holistic cross-GDD consistency and game design review. Reads"
+  default_prompt: "Use $ai-game-studio:review-all-gdds to holistic cross-GDD consistency and game design review. Reads for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

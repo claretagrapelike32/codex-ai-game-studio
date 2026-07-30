@@ -1,0 +1,6 @@
+interface:
+  display_name: "Team Live Ops"
+  short_description: "Orchestrate the live-ops team for post-launch content"
+  default_prompt: "Use $ai-game-studio:team-live-ops to orchestrate the live-ops team for post-launch content for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

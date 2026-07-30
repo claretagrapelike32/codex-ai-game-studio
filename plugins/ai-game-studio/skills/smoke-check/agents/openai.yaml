@@ -1,0 +1,6 @@
+interface:
+  display_name: "Smoke Check"
+  short_description: "Run the critical path smoke test gate before QA hand-off."
+  default_prompt: "Use $ai-game-studio:smoke-check to run the critical path smoke test gate before QA hand-off. for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

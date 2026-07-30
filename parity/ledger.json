@@ -1,0 +1,2921 @@
+{
+  "$schema": "./parity-ledger.schema.json",
+  "version": 1,
+  "source": {
+    "repository": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+    "commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+    "license": "MIT",
+    "attribution": "Donchitos and Claude Code Game Studios contributors",
+    "verified_date": "2026-07-30"
+  },
+  "expected": {
+    "skill": 73,
+    "role": 49,
+    "hook-behavior": 12,
+    "rule": 11,
+    "template": 40,
+    "native-skill": 12,
+    "total-core-skills": 85
+  },
+  "actual": {
+    "skill": 73,
+    "role": 49,
+    "rule": 11,
+    "template": 40,
+    "hook-behavior": 12,
+    "native-skill": 12,
+    "total-core-skills": 85
+  },
+  "entries": [
+    {
+      "kind": "hook-behavior",
+      "id": "detect-gaps",
+      "source_path": ".claude/hooks/detect-gaps.sh",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "2a2c96da8c9cb2d9081a1a94a518e6ad94a6ba5e",
+      "destination": "plugins/ai-game-studio-automation/hooks/hooks.json",
+      "codex_mappings": [
+        "SessionStart:orientation-and-gap-detection"
+      ],
+      "status": "replaced",
+      "tests": [
+        "parity-count",
+        "hook-event-fixtures",
+        "windows-posix-command-paths"
+      ]
+    },
+    {
+      "kind": "hook-behavior",
+      "id": "log-agent",
+      "source_path": ".claude/hooks/log-agent.sh",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "e39a5e7294be60e4d7588b235dc5c90c965148b0",
+      "destination": "plugins/ai-game-studio-automation/hooks/hooks.json",
+      "codex_mappings": [
+        "SubagentStart:bounded-audit-log"
+      ],
+      "status": "replaced",
+      "tests": [
+        "parity-count",
+        "hook-event-fixtures",
+        "windows-posix-command-paths"
+      ]
+    },
+    {
+      "kind": "hook-behavior",
+      "id": "log-agent-stop",
+      "source_path": ".claude/hooks/log-agent-stop.sh",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "afbd28196d79f2355f1be7179476d2a6cd38600b",
+      "destination": "plugins/ai-game-studio-automation/hooks/hooks.json",
+      "codex_mappings": [
+        "SubagentStop:bounded-audit-log"
+      ],
+      "status": "replaced",
+      "tests": [
+        "parity-count",
+        "hook-event-fixtures",
+        "windows-posix-command-paths"
+      ]
+    },
+    {
+      "kind": "hook-behavior",
+      "id": "notify",
+      "source_path": ".claude/hooks/notify.sh",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "661b0bd618885debd653240fac60e80d97e3d34f",
+      "destination": "plugins/ai-game-studio-automation/hooks/hooks.json",
+      "codex_mappings": [
+        "Stop:best-effort-notification",
+        "SessionEnd:best-effort-notification"
+      ],
+      "status": "replaced",
+      "tests": [
+        "parity-count",
+        "hook-event-fixtures",
+        "windows-posix-command-paths"
+      ]
+    },
+    {
+      "kind": "hook-behavior",
+      "id": "post-compact",
+      "source_path": ".claude/hooks/post-compact.sh",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "92d57fa90da9f24403c6f8e34fad01b224a9cb8c",
+      "destination": "plugins/ai-game-studio-automation/hooks/hooks.json",
+      "codex_mappings": [
+        "PostCompact:state-restoration"
+      ],
+      "status": "replaced",
+      "tests": [
+        "parity-count",
+        "hook-event-fixtures",
+        "windows-posix-command-paths"
+      ]
+    },
+    {
+      "kind": "hook-behavior",
+      "id": "pre-compact",
+      "source_path": ".claude/hooks/pre-compact.sh",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "4d4842f5f1b9409033556451632476a11e89958e",
+      "destination": "plugins/ai-game-studio-automation/hooks/hooks.json",
+      "codex_mappings": [
+        "PreCompact:state-preservation"
+      ],
+      "status": "replaced",
+      "tests": [
+        "parity-count",
+        "hook-event-fixtures",
+        "windows-posix-command-paths"
+      ]
+    },
+    {
+      "kind": "hook-behavior",
+      "id": "session-start",
+      "source_path": ".claude/hooks/session-start.sh",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "05687d19723fb02e9ebc04974a516a67689aeec2",
+      "destination": "plugins/ai-game-studio-automation/hooks/hooks.json",
+      "codex_mappings": [
+        "SessionStart:orientation-and-gap-detection"
+      ],
+      "status": "replaced",
+      "tests": [
+        "parity-count",
+        "hook-event-fixtures",
+        "windows-posix-command-paths"
+      ]
+    },
+    {
+      "kind": "hook-behavior",
+      "id": "session-stop",
+      "source_path": ".claude/hooks/session-stop.sh",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "2b78ac2505ed20242c5ce799ef8df75b5e7db944",
+      "destination": "plugins/ai-game-studio-automation/hooks/hooks.json",
+      "codex_mappings": [
+        "Stop:session-summary",
+        "SessionEnd:session-archive"
+      ],
+      "status": "replaced",
+      "tests": [
+        "parity-count",
+        "hook-event-fixtures",
+        "windows-posix-command-paths"
+      ]
+    },
+    {
+      "kind": "hook-behavior",
+      "id": "validate-assets",
+      "source_path": ".claude/hooks/validate-assets.sh",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "4468524158ee0344731dcd480facf257cdbadd8a",
+      "destination": "plugins/ai-game-studio-automation/hooks/hooks.json",
+      "codex_mappings": [
+        "PostToolUse:asset-validation"
+      ],
+      "status": "replaced",
+      "tests": [
+        "parity-count",
+        "hook-event-fixtures",
+        "windows-posix-command-paths"
+      ]
+    },
+    {
+      "kind": "hook-behavior",
+      "id": "validate-commit",
+      "source_path": ".claude/hooks/validate-commit.sh",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "530b433721b970d9aef0c13398e8595ad81365ea",
+      "destination": "plugins/ai-game-studio-automation/hooks/hooks.json",
+      "codex_mappings": [
+        "PreToolUse:commit-safeguard"
+      ],
+      "status": "replaced",
+      "tests": [
+        "parity-count",
+        "hook-event-fixtures",
+        "windows-posix-command-paths"
+      ]
+    },
+    {
+      "kind": "hook-behavior",
+      "id": "validate-push",
+      "source_path": ".claude/hooks/validate-push.sh",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "e9aff2eb0b3d85d6d5aa4923dc73ff7e89639e51",
+      "destination": "plugins/ai-game-studio-automation/hooks/hooks.json",
+      "codex_mappings": [
+        "PreToolUse:push-safeguard"
+      ],
+      "status": "replaced",
+      "tests": [
+        "parity-count",
+        "hook-event-fixtures",
+        "windows-posix-command-paths"
+      ]
+    },
+    {
+      "kind": "hook-behavior",
+      "id": "validate-skill-change",
+      "source_path": ".claude/hooks/validate-skill-change.sh",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "23d657db0849540dc13920d869cc120869890bc2",
+      "destination": "plugins/ai-game-studio-automation/hooks/hooks.json",
+      "codex_mappings": [
+        "PostToolUse:skill-validation"
+      ],
+      "status": "replaced",
+      "tests": [
+        "parity-count",
+        "hook-event-fixtures",
+        "windows-posix-command-paths"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "accessibility-specialist",
+      "source_path": ".claude/agents/accessibility-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "069165d94c57e7c9d2194e1b21ab31a7d2ee99f7",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/accessibility-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "ai-programmer",
+      "source_path": ".claude/agents/ai-programmer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "e7e49e06046696f41bd9da25eab88260959e2423",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/ai-programmer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "analytics-engineer",
+      "source_path": ".claude/agents/analytics-engineer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "0a27c4d061b6673df1231725065e470391e05c36",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/analytics-engineer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "art-director",
+      "source_path": ".claude/agents/art-director.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "430115b327644004a767590b16f7dc9029a1055b",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/art-director.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "audio-director",
+      "source_path": ".claude/agents/audio-director.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "bdc38d7b50c664fd7cf55424dd43ec34438d189b",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/audio-director.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "community-manager",
+      "source_path": ".claude/agents/community-manager.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "55c16d22d43a549dfc3964e75f4f48256dcb53f2",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/community-manager.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "creative-director",
+      "source_path": ".claude/agents/creative-director.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "5ca634e2e79332ca1c382e49c69927d618122e51",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/creative-director.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "devops-engineer",
+      "source_path": ".claude/agents/devops-engineer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "d672f5d43929b4be77429430f12bf87ad6804663",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/devops-engineer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "economy-designer",
+      "source_path": ".claude/agents/economy-designer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "539da549e3eca3db985006858b46acbe0c470229",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/economy-designer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "engine-programmer",
+      "source_path": ".claude/agents/engine-programmer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "3d29c4e54c8e60c7ab3f3ad285adfc68f3d9effd",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/engine-programmer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "game-designer",
+      "source_path": ".claude/agents/game-designer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "0833aef6488841d2cf653671a78e4f8603d89c92",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/game-designer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "gameplay-programmer",
+      "source_path": ".claude/agents/gameplay-programmer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "eed7f2983d6c7a5522a08c526749e3f01a0aba77",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/gameplay-programmer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "godot-csharp-specialist",
+      "source_path": ".claude/agents/godot-csharp-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "99fc1c42728873271facb46d23de1f14d869810e",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/godot-csharp-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "godot-gdextension-specialist",
+      "source_path": ".claude/agents/godot-gdextension-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "a0c5d30bd3b40dcae02f683dc7dee41176acb1d0",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/godot-gdextension-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "godot-gdscript-specialist",
+      "source_path": ".claude/agents/godot-gdscript-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "b664a7f2a619db06f2cc903ff091c85fa01038dd",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/godot-gdscript-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "godot-shader-specialist",
+      "source_path": ".claude/agents/godot-shader-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "150d01bebaba2f314a654aa4bff625f2b26243d6",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/godot-shader-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "godot-specialist",
+      "source_path": ".claude/agents/godot-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c7d072ac9dc7d2ee26356133dd5ab9e31f3e4379",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/godot-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "lead-programmer",
+      "source_path": ".claude/agents/lead-programmer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "ee1dd23d99487e6da96483f6944454ebab15cca6",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/lead-programmer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "level-designer",
+      "source_path": ".claude/agents/level-designer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "2dde00fa2467529257a100fd296e8864d9d6ddb1",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/level-designer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "live-ops-designer",
+      "source_path": ".claude/agents/live-ops-designer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "07bda790d7d96802c00124f5c0b76ab7c79bc703",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/live-ops-designer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "localization-lead",
+      "source_path": ".claude/agents/localization-lead.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "d6e6bea1438a416ca1235e53a3fabf4e648da2c6",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/localization-lead.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "narrative-director",
+      "source_path": ".claude/agents/narrative-director.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "a54b85fc4da2c9bf5ee622991c2b6032433a0c26",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/narrative-director.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "network-programmer",
+      "source_path": ".claude/agents/network-programmer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "a9c41d6085ddaffcfcd37e1ec7a20373edadf95d",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/network-programmer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "performance-analyst",
+      "source_path": ".claude/agents/performance-analyst.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "ca1594fa369c1f56ece13ef750ba7fbd4a31fbd0",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/performance-analyst.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "producer",
+      "source_path": ".claude/agents/producer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "09d6d7b07d0f127c8fdb409f1aeee27b64a2e89b",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/producer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "prototyper",
+      "source_path": ".claude/agents/prototyper.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "cb19a8b5f8875a30356aec0d7948ca79b3f48c61",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/prototyper.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "qa-lead",
+      "source_path": ".claude/agents/qa-lead.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "ceb286adc43bd6d7d43dbd44643d7ff014efad04",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/qa-lead.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "qa-tester",
+      "source_path": ".claude/agents/qa-tester.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "2fbe017864c89640e9a5bc14a06b50244a042d1f",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/qa-tester.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "release-manager",
+      "source_path": ".claude/agents/release-manager.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "33ac9ef0c1a32e129a9d6eb97f3818c0f36ed6ed",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/release-manager.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "security-engineer",
+      "source_path": ".claude/agents/security-engineer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "2eec7577a1c18dd22d8928bdd119df625b0588c2",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/security-engineer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "sound-designer",
+      "source_path": ".claude/agents/sound-designer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "a2eb989b1b18926b54c6bc5a6cc1a290ad7a7af9",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/sound-designer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "systems-designer",
+      "source_path": ".claude/agents/systems-designer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "0b2f4020318bd5d40a04c411530442f7638023f6",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/systems-designer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "technical-artist",
+      "source_path": ".claude/agents/technical-artist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "8ada0902c32cbb70abdf35ac0f870df6d377cb99",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/technical-artist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "technical-director",
+      "source_path": ".claude/agents/technical-director.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "2dc35e0e3e309b8ac6077089334772742271b76b",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/technical-director.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "tools-programmer",
+      "source_path": ".claude/agents/tools-programmer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "8cad30825ce4aaa342a8f82f862a2cb3059f05e4",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/tools-programmer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "ue-blueprint-specialist",
+      "source_path": ".claude/agents/ue-blueprint-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "3854c4a39a6d2623bef273128609c1d2f69c3dfd",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/ue-blueprint-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "ue-gas-specialist",
+      "source_path": ".claude/agents/ue-gas-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "f3c690b1460826c74ce1956714caeb61e4bea8c6",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/ue-gas-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "ue-replication-specialist",
+      "source_path": ".claude/agents/ue-replication-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "83647642becad0b272e38db771e0ad98129e698b",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/ue-replication-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "ue-umg-specialist",
+      "source_path": ".claude/agents/ue-umg-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "9f276344b701cad2600f7563cbcdea685adc69ae",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/ue-umg-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "ui-programmer",
+      "source_path": ".claude/agents/ui-programmer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c0282fa812d923e284bcb46e68a37f9ef5c458c2",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/ui-programmer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "unity-addressables-specialist",
+      "source_path": ".claude/agents/unity-addressables-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "2e814375ea7c661b50b1e3c80fb7da90714fe002",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/unity-addressables-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "unity-dots-specialist",
+      "source_path": ".claude/agents/unity-dots-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "6973687622523473047d27cc1931b928f9c10000",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/unity-dots-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "unity-shader-specialist",
+      "source_path": ".claude/agents/unity-shader-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "2b014929ab93b2aff034bf1d734a44a0b59c66db",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/unity-shader-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "unity-specialist",
+      "source_path": ".claude/agents/unity-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "d5b2bfb028253248aa128207730ae9efe69fa650",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/unity-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "unity-ui-specialist",
+      "source_path": ".claude/agents/unity-ui-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "beae284ac06c2384174a987698b7ef2e79566062",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/unity-ui-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "unreal-specialist",
+      "source_path": ".claude/agents/unreal-specialist.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "971ff593fcc60b294311efdd61bbc848f1e38a4d",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/unreal-specialist.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "ux-designer",
+      "source_path": ".claude/agents/ux-designer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "e0f62c78d1dae71704547125f6382f52b27df0a2",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/ux-designer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "world-builder",
+      "source_path": ".claude/agents/world-builder.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "1f638e765e74928bec1764e668401e51faea76df",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/world-builder.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "role",
+      "id": "writer",
+      "source_path": ".claude/agents/writer.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "4161ee9204d5c32b87433ae8086768db68a9b256",
+      "destination": "plugins/ai-game-studio-automation/templates/agents/writer.toml",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "toml-parse",
+        "inheritance-policy",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "ai-code",
+      "source_path": ".claude/rules/ai-code.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "5a4954a8a56d96027368718ddb1afa458fa24aee",
+      "destination": "plugins/ai-game-studio-automation/templates/rules/ai-code.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "path-scope-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "data-files",
+      "source_path": ".claude/rules/data-files.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "7928fd10ef73209e93e2e1c91a4cbb3c02d51891",
+      "destination": "plugins/ai-game-studio-automation/templates/rules/data-files.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "path-scope-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "design-docs",
+      "source_path": ".claude/rules/design-docs.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "33ea61702d8e5fffe4787348c04fc379daf1279b",
+      "destination": "plugins/ai-game-studio-automation/templates/rules/design-docs.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "path-scope-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "engine-code",
+      "source_path": ".claude/rules/engine-code.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "d6ebe0563acebae68da76d74be6e1ab4569e132b",
+      "destination": "plugins/ai-game-studio-automation/templates/rules/engine-code.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "path-scope-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "gameplay-code",
+      "source_path": ".claude/rules/gameplay-code.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "06256b1be9ced2ecf21059b896f1e21d232aa708",
+      "destination": "plugins/ai-game-studio-automation/templates/rules/gameplay-code.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "path-scope-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "narrative",
+      "source_path": ".claude/rules/narrative.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "6fb9c3ee6e3bd6647e324a160834414fd62d19a4",
+      "destination": "plugins/ai-game-studio-automation/templates/rules/narrative.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "path-scope-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "network-code",
+      "source_path": ".claude/rules/network-code.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "49f4d62a571a37fee7a9049fcc384a6846019857",
+      "destination": "plugins/ai-game-studio-automation/templates/rules/network-code.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "path-scope-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "prototype-code",
+      "source_path": ".claude/rules/prototype-code.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "f79f232908ac76e576a55090bd8684f5c708b850",
+      "destination": "plugins/ai-game-studio-automation/templates/rules/prototype-code.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "path-scope-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "shader-code",
+      "source_path": ".claude/rules/shader-code.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "e2b40cbb7b9fb84e3edf3cf94b16357ce561b7d4",
+      "destination": "plugins/ai-game-studio-automation/templates/rules/shader-code.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "path-scope-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "test-standards",
+      "source_path": ".claude/rules/test-standards.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c58df1526d59018b13fd4381a454391703910653",
+      "destination": "plugins/ai-game-studio-automation/templates/rules/test-standards.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "path-scope-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "rule",
+      "id": "ui-code",
+      "source_path": ".claude/rules/ui-code.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "ece530ed2125b3a3883aec3194a6f14950b2028f",
+      "destination": "plugins/ai-game-studio-automation/templates/rules/ui-code.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "path-scope-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "adopt",
+      "source_path": ".claude/skills/adopt/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "61843a81fbac465f11401f1dc6cd376ccd6b2af9",
+      "destination": "plugins/ai-game-studio/skills/adopt/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "architecture-decision",
+      "source_path": ".claude/skills/architecture-decision/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "4ff25bc33313fce19f7a41caea2d5a170181126b",
+      "destination": "plugins/ai-game-studio/skills/architecture-decision/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "architecture-review",
+      "source_path": ".claude/skills/architecture-review/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "3ce3c6d91a9935928211104a48d6988ab92ab97b",
+      "destination": "plugins/ai-game-studio/skills/architecture-review/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ],
+      "supporting_files": [
+        "plugins/ai-game-studio/skills/architecture-review/references/full-workflow.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "art-bible",
+      "source_path": ".claude/skills/art-bible/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "1a264ba0a05335b324bf6f2ab1ad3a7b86dac1e1",
+      "destination": "plugins/ai-game-studio/skills/art-bible/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "asset-audit",
+      "source_path": ".claude/skills/asset-audit/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "055c88f4b4cf5b277190ec40ac0d4e4b81f18634",
+      "destination": "plugins/ai-game-studio/skills/asset-audit/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "asset-spec",
+      "source_path": ".claude/skills/asset-spec/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "463afbcd1ea7fed2b80b81b7141f00d418545500",
+      "destination": "plugins/ai-game-studio/skills/asset-spec/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "balance-check",
+      "source_path": ".claude/skills/balance-check/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "7d5f74cf104d524310a9bbf2184453312b0830be",
+      "destination": "plugins/ai-game-studio/skills/balance-check/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "brainstorm",
+      "source_path": ".claude/skills/brainstorm/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "d0259dcaaf4962f8ade1dda1d948b622b5ccd173",
+      "destination": "plugins/ai-game-studio/skills/brainstorm/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "bug-report",
+      "source_path": ".claude/skills/bug-report/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "3d46fc0c83c5829f0bdc598209cacdfbf840f876",
+      "destination": "plugins/ai-game-studio/skills/bug-report/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "bug-triage",
+      "source_path": ".claude/skills/bug-triage/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "442eb0dc9ad353630519837ccc57fad88d38b672",
+      "destination": "plugins/ai-game-studio/skills/bug-triage/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "changelog",
+      "source_path": ".claude/skills/changelog/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "4e618cb46ed39b5ce87de12120e64a414ff5c3ba",
+      "destination": "plugins/ai-game-studio/skills/changelog/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "code-review",
+      "source_path": ".claude/skills/code-review/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "19c422afcc10cbcf507401d711ea125af207de8a",
+      "destination": "plugins/ai-game-studio/skills/code-review/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "consistency-check",
+      "source_path": ".claude/skills/consistency-check/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "31c2b2da4c540a6a8adfdc34c5c93833b215c74c",
+      "destination": "plugins/ai-game-studio/skills/consistency-check/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "content-audit",
+      "source_path": ".claude/skills/content-audit/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "9fab061dc84c37f8f4598b4792d2c25e94b74f0f",
+      "destination": "plugins/ai-game-studio/skills/content-audit/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "create-architecture",
+      "source_path": ".claude/skills/create-architecture/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "a8e26ed0020912939b0c5106f731b9a4a3b07aa1",
+      "destination": "plugins/ai-game-studio/skills/create-architecture/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "create-control-manifest",
+      "source_path": ".claude/skills/create-control-manifest/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "f6e70054f28a59f46bd7ba84ae76dbe07b880d5e",
+      "destination": "plugins/ai-game-studio/skills/create-control-manifest/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "create-epics",
+      "source_path": ".claude/skills/create-epics/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "dc2d60700c105145151a3874b27a0bbd82a97348",
+      "destination": "plugins/ai-game-studio/skills/create-epics/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "create-stories",
+      "source_path": ".claude/skills/create-stories/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "796fe1ce69cf75ced7252fd61aceff93e9322154",
+      "destination": "plugins/ai-game-studio/skills/create-stories/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "day-one-patch",
+      "source_path": ".claude/skills/day-one-patch/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "5d1601fff824787d7fff3b7df794ffd87a1580a6",
+      "destination": "plugins/ai-game-studio/skills/day-one-patch/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "design-review",
+      "source_path": ".claude/skills/design-review/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "b0b90eae3b533fb920e2c6e3fdf6f2b1798a6e70",
+      "destination": "plugins/ai-game-studio/skills/design-review/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "design-system",
+      "source_path": ".claude/skills/design-system/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "1250d3face8808b83cd769fdcfb4edf1c8631904",
+      "destination": "plugins/ai-game-studio/skills/design-system/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ],
+      "supporting_files": [
+        "plugins/ai-game-studio/skills/design-system/references/full-workflow.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "dev-story",
+      "source_path": ".claude/skills/dev-story/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "13624ff91170ae5e51f20e511f3cd120a5cfd781",
+      "destination": "plugins/ai-game-studio/skills/dev-story/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "estimate",
+      "source_path": ".claude/skills/estimate/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "042a2d7c20c327177d3b79c181db3b624dd30794",
+      "destination": "plugins/ai-game-studio/skills/estimate/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "gate-check",
+      "source_path": ".claude/skills/gate-check/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "8feb8f667ea856007854be5563c6fdccdd930904",
+      "destination": "plugins/ai-game-studio/skills/gate-check/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ],
+      "supporting_files": [
+        "plugins/ai-game-studio/skills/gate-check/references/full-workflow.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "help",
+      "source_path": ".claude/skills/help/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "12757c80271de51edf0aca22c26ad21a69dcc712",
+      "destination": "plugins/ai-game-studio/skills/help/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "hotfix",
+      "source_path": ".claude/skills/hotfix/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "73243ade6bd4f5514ef2d5553f00f598b1a1d0ae",
+      "destination": "plugins/ai-game-studio/skills/hotfix/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "launch-checklist",
+      "source_path": ".claude/skills/launch-checklist/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "1dd6442724663c3606291f7da1b90a1d690342f6",
+      "destination": "plugins/ai-game-studio/skills/launch-checklist/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "localize",
+      "source_path": ".claude/skills/localize/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "505286a7155d0c906522200c1324680b91e605f2",
+      "destination": "plugins/ai-game-studio/skills/localize/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "map-systems",
+      "source_path": ".claude/skills/map-systems/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "f69ae1b3d13f74299d661cdd6b2bc27253329c2b",
+      "destination": "plugins/ai-game-studio/skills/map-systems/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "milestone-review",
+      "source_path": ".claude/skills/milestone-review/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "cf60b95969184dc84be995ff42ccb1e7ba4480bf",
+      "destination": "plugins/ai-game-studio/skills/milestone-review/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "onboard",
+      "source_path": ".claude/skills/onboard/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "19b58aa1fcea148d665dc95e6e80590a0e4b75a1",
+      "destination": "plugins/ai-game-studio/skills/onboard/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "patch-notes",
+      "source_path": ".claude/skills/patch-notes/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c16fda83304e17717f0e3b339db2da48b78d9bb7",
+      "destination": "plugins/ai-game-studio/skills/patch-notes/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "perf-profile",
+      "source_path": ".claude/skills/perf-profile/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "68f21665b57259a753422bf804b16ac2d9452610",
+      "destination": "plugins/ai-game-studio/skills/perf-profile/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "playtest-report",
+      "source_path": ".claude/skills/playtest-report/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "cc4c3aff850d52c69f27f731158ea87180102ebf",
+      "destination": "plugins/ai-game-studio/skills/playtest-report/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "project-stage-detect",
+      "source_path": ".claude/skills/project-stage-detect/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "148abaaea29dcdccedc19dd6696c31d4790e997a",
+      "destination": "plugins/ai-game-studio/skills/project-stage-detect/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "propagate-design-change",
+      "source_path": ".claude/skills/propagate-design-change/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "86d50eb17bdf0d18f46427b6495107302ed925bb",
+      "destination": "plugins/ai-game-studio/skills/propagate-design-change/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "prototype",
+      "source_path": ".claude/skills/prototype/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c25e3d97d82ed94cecf8c558e44bbd1cbabd6aa5",
+      "destination": "plugins/ai-game-studio/skills/prototype/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ],
+      "supporting_files": [
+        "plugins/ai-game-studio/skills/prototype/references/full-workflow.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "qa-plan",
+      "source_path": ".claude/skills/qa-plan/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "0e6c52b6c2f6358250474d8c9563da0407d455a1",
+      "destination": "plugins/ai-game-studio/skills/qa-plan/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "quick-design",
+      "source_path": ".claude/skills/quick-design/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "bdb3392346cd88436974bca4e4d210ae56fe5948",
+      "destination": "plugins/ai-game-studio/skills/quick-design/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "regression-suite",
+      "source_path": ".claude/skills/regression-suite/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "e0f7655bee4a9caf589f4c9a3ea169fd55329455",
+      "destination": "plugins/ai-game-studio/skills/regression-suite/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "release-checklist",
+      "source_path": ".claude/skills/release-checklist/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "57d2eff0dd74f243846737b66f4dfdb38148bbbd",
+      "destination": "plugins/ai-game-studio/skills/release-checklist/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "retrospective",
+      "source_path": ".claude/skills/retrospective/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c2a8d1e2930c1eef73af18105a3c814bcd5df14b",
+      "destination": "plugins/ai-game-studio/skills/retrospective/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "reverse-document",
+      "source_path": ".claude/skills/reverse-document/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "04d4f319c8245003b5dd5e776639f128ebee2699",
+      "destination": "plugins/ai-game-studio/skills/reverse-document/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "review-all-gdds",
+      "source_path": ".claude/skills/review-all-gdds/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "67b604f3b9aafe8d505b005a988b2fa665ea6345",
+      "destination": "plugins/ai-game-studio/skills/review-all-gdds/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ],
+      "supporting_files": [
+        "plugins/ai-game-studio/skills/review-all-gdds/references/full-workflow.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "scope-check",
+      "source_path": ".claude/skills/scope-check/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "ccffc910a92122bbef316ac49eb2d220a56c682a",
+      "destination": "plugins/ai-game-studio/skills/scope-check/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "security-audit",
+      "source_path": ".claude/skills/security-audit/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "d77b678be5e9bc5354effd06865e0c1de9283486",
+      "destination": "plugins/ai-game-studio/skills/security-audit/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "setup-engine",
+      "source_path": ".claude/skills/setup-engine/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "5dcf61b00f5a974113e78f7e8e2b2dc3fa415904",
+      "destination": "plugins/ai-game-studio/skills/setup-engine/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "skill-improve",
+      "source_path": ".claude/skills/skill-improve/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c9a0f2bb394858af5009e7a5cb816dd89923ca22",
+      "destination": "plugins/ai-game-studio/skills/skill-improve/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "skill-test",
+      "source_path": ".claude/skills/skill-test/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "e6748d864884ddd9af1025b098851f98c1c119ce",
+      "destination": "plugins/ai-game-studio/skills/skill-test/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "smoke-check",
+      "source_path": ".claude/skills/smoke-check/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "2f5d073b431e99186a37b4304d02c86d4457569d",
+      "destination": "plugins/ai-game-studio/skills/smoke-check/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "soak-test",
+      "source_path": ".claude/skills/soak-test/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "e09c51955507c20f649c24adbffd60ec488a6ea9",
+      "destination": "plugins/ai-game-studio/skills/soak-test/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "sprint-plan",
+      "source_path": ".claude/skills/sprint-plan/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "65254a94cc88f5461944a6088cc2b0025ffc3fe8",
+      "destination": "plugins/ai-game-studio/skills/sprint-plan/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "sprint-status",
+      "source_path": ".claude/skills/sprint-status/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "0f82f4d79fcf5cdee8887a38d9b2e321a0fdffc9",
+      "destination": "plugins/ai-game-studio/skills/sprint-status/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "start",
+      "source_path": ".claude/skills/start/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "0cb102dc8429f0f370797973e0300c2d4c3e5601",
+      "destination": "plugins/ai-game-studio/skills/start/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "story-done",
+      "source_path": ".claude/skills/story-done/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "851a496c267f5e22fb2349c228fed108d10c008e",
+      "destination": "plugins/ai-game-studio/skills/story-done/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "story-readiness",
+      "source_path": ".claude/skills/story-readiness/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "8ddabcfb8e1a771a14b4cf3d298b63b45af3485c",
+      "destination": "plugins/ai-game-studio/skills/story-readiness/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "team-audio",
+      "source_path": ".claude/skills/team-audio/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c93e70816f3456c7273650622ba3fd77ec5742fc",
+      "destination": "plugins/ai-game-studio/skills/team-audio/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "team-combat",
+      "source_path": ".claude/skills/team-combat/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "201014beadac6e3a70d6d3036abea2f83a8f4ed8",
+      "destination": "plugins/ai-game-studio/skills/team-combat/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "team-level",
+      "source_path": ".claude/skills/team-level/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "3e53c93a7ae05f4be75796d08d3ec3215d617f10",
+      "destination": "plugins/ai-game-studio/skills/team-level/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "team-live-ops",
+      "source_path": ".claude/skills/team-live-ops/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "553e09d2f56a16eafa43af15800826c7984bc1b6",
+      "destination": "plugins/ai-game-studio/skills/team-live-ops/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "team-narrative",
+      "source_path": ".claude/skills/team-narrative/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "45f2833b30dd49e805b5343aa9617d0ce7a3aa20",
+      "destination": "plugins/ai-game-studio/skills/team-narrative/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "team-polish",
+      "source_path": ".claude/skills/team-polish/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "41fe1e215aa9508971b03fc1a5f89f2b330a9e86",
+      "destination": "plugins/ai-game-studio/skills/team-polish/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "team-qa",
+      "source_path": ".claude/skills/team-qa/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "55e0c73fb459f8308851291e1beb41d8eeca8002",
+      "destination": "plugins/ai-game-studio/skills/team-qa/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "team-release",
+      "source_path": ".claude/skills/team-release/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "b002091f0846451ed4bcf3981fd8089f7b0cc91b",
+      "destination": "plugins/ai-game-studio/skills/team-release/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "team-ui",
+      "source_path": ".claude/skills/team-ui/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "50707bd0c86e45ac0da1d07d89132466f8deb799",
+      "destination": "plugins/ai-game-studio/skills/team-ui/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "tech-debt",
+      "source_path": ".claude/skills/tech-debt/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "5d624dcc62ad54ed29fdcd152927c55273194c62",
+      "destination": "plugins/ai-game-studio/skills/tech-debt/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "test-evidence-review",
+      "source_path": ".claude/skills/test-evidence-review/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "279cd38852dae75b6f21ff8aecd182d697b4f35e",
+      "destination": "plugins/ai-game-studio/skills/test-evidence-review/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "test-flakiness",
+      "source_path": ".claude/skills/test-flakiness/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "099a1934104cf6ae3cc73d5dcecc31c776daef11",
+      "destination": "plugins/ai-game-studio/skills/test-flakiness/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "test-helpers",
+      "source_path": ".claude/skills/test-helpers/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "0592ac9e0292b5233b55213258771ad2bba6ef06",
+      "destination": "plugins/ai-game-studio/skills/test-helpers/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "test-setup",
+      "source_path": ".claude/skills/test-setup/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "634128b87702594e4be916d59ddb63bbea533d91",
+      "destination": "plugins/ai-game-studio/skills/test-setup/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "ux-design",
+      "source_path": ".claude/skills/ux-design/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "ce3389a2723fb261e28b8e1c2be9cb773e9b55bb",
+      "destination": "plugins/ai-game-studio/skills/ux-design/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ],
+      "supporting_files": [
+        "plugins/ai-game-studio/skills/ux-design/references/full-workflow.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "ux-review",
+      "source_path": ".claude/skills/ux-review/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c65bc8e5284778888936aa76d6db94c3747610ca",
+      "destination": "plugins/ai-game-studio/skills/ux-review/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "skill",
+      "id": "vertical-slice",
+      "source_path": ".claude/skills/vertical-slice/SKILL.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "03083a7b057ca2edc17f251636d549e2d7f3f14c",
+      "destination": "plugins/ai-game-studio/skills/vertical-slice/SKILL.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "skill-frontmatter",
+        "skill-metadata",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "accessibility-requirements.md",
+      "source_path": ".claude/docs/templates/accessibility-requirements.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "3a7089b6b1954aeb21d29ba2b4b8a3141b21d0d9",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/accessibility-requirements.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "architecture-decision-record.md",
+      "source_path": ".claude/docs/templates/architecture-decision-record.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "0bc567a99e5c7d8028af437d7f35491a531122fd",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/architecture-decision-record.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "architecture-doc-from-code.md",
+      "source_path": ".claude/docs/templates/architecture-doc-from-code.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "4b88ce088508283b51b0c3bccebfe3b56a170da7",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/architecture-doc-from-code.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "architecture-traceability.md",
+      "source_path": ".claude/docs/templates/architecture-traceability.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "78b9bf01c47d145f9a2f7b60658bebe7c12f45e6",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/architecture-traceability.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "art-bible.md",
+      "source_path": ".claude/docs/templates/art-bible.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "3bb7bfddeec58f4d4e8c642f44b9032dad1c8ade",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/art-bible.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "changelog-template.md",
+      "source_path": ".claude/docs/templates/changelog-template.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "56f9cf3b8917569fa80bea4725140b0a04ef5696",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/changelog-template.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "collaborative-protocols/design-agent-protocol.md",
+      "source_path": ".claude/docs/templates/collaborative-protocols/design-agent-protocol.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c9d7460bf29f6abcae8ef1944b4ad39687de3910",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/collaborative-protocols/design-agent-protocol.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "collaborative-protocols/implementation-agent-protocol.md",
+      "source_path": ".claude/docs/templates/collaborative-protocols/implementation-agent-protocol.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "3ea80e7012a83e3f16b4d57afe58090b9ba6ec09",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/collaborative-protocols/implementation-agent-protocol.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "collaborative-protocols/leadership-agent-protocol.md",
+      "source_path": ".claude/docs/templates/collaborative-protocols/leadership-agent-protocol.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "72e36c8790a5d309d4fd53ad9ed513a032dab2c5",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/collaborative-protocols/leadership-agent-protocol.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "concept-doc-from-prototype.md",
+      "source_path": ".claude/docs/templates/concept-doc-from-prototype.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "f4c73478acc8e9a61a4f86eaa278b9bb0c86555f",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/concept-doc-from-prototype.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "design-doc-from-implementation.md",
+      "source_path": ".claude/docs/templates/design-doc-from-implementation.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "5890c8b3e8eafdbc124ba775c69669adc43fadec",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/design-doc-from-implementation.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "difficulty-curve.md",
+      "source_path": ".claude/docs/templates/difficulty-curve.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "4e92ea3aec58c2ef4e12730acace8ddc3450ab0a",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/difficulty-curve.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "economy-model.md",
+      "source_path": ".claude/docs/templates/economy-model.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "50d7a8cf7193cc650eba8243c5103fdb320f1113",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/economy-model.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "faction-design.md",
+      "source_path": ".claude/docs/templates/faction-design.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "aa0d1027ab62041f90c458044c687fb8c6154c89",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/faction-design.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "game-concept.md",
+      "source_path": ".claude/docs/templates/game-concept.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "3a778a5419100a80903af31d0de043fc0acf184d",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/game-concept.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "game-design-document.md",
+      "source_path": ".claude/docs/templates/game-design-document.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "e17d95a9df1223938a078bd90463559fb1b42a98",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/game-design-document.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "game-pillars.md",
+      "source_path": ".claude/docs/templates/game-pillars.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "a462ea69cb9e98a2533067d93996c9bb9c2725ad",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/game-pillars.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "hud-design.md",
+      "source_path": ".claude/docs/templates/hud-design.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "73172785d8d4c16aa030e1b2a62741c6886df8af",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/hud-design.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "incident-response.md",
+      "source_path": ".claude/docs/templates/incident-response.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "b4c6bd3343d05526b540ba93cf81f8883842a235",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/incident-response.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "interaction-pattern-library.md",
+      "source_path": ".claude/docs/templates/interaction-pattern-library.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "355d9414d659aaaa4c9145d3e92c1b2b49dc53bc",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/interaction-pattern-library.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "level-design-document.md",
+      "source_path": ".claude/docs/templates/level-design-document.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "eddb2083c171f1138ee791202cd3b4d694724d0d",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/level-design-document.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "milestone-definition.md",
+      "source_path": ".claude/docs/templates/milestone-definition.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "b0da3b6b7c4c97d1aae3a6b9eeafd666c9f683d1",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/milestone-definition.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "narrative-character-sheet.md",
+      "source_path": ".claude/docs/templates/narrative-character-sheet.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "aa5001818077955de7d3b680bd21c47cd8ae22ab",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/narrative-character-sheet.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "pitch-document.md",
+      "source_path": ".claude/docs/templates/pitch-document.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "eac0769d708b7dad2e10296c9bdae8d805619958",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/pitch-document.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "player-journey.md",
+      "source_path": ".claude/docs/templates/player-journey.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "23641c70116be6e24410f03064230e65d97cc610",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/player-journey.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "post-mortem.md",
+      "source_path": ".claude/docs/templates/post-mortem.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "87dbce96ca12b753269b602b6095fce07b52f492",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/post-mortem.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "project-stage-report.md",
+      "source_path": ".claude/docs/templates/project-stage-report.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c033dd6950d6e9145dace0bc460b053a282374e0",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/project-stage-report.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "prototype-report.md",
+      "source_path": ".claude/docs/templates/prototype-report.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "ebebff3c64f96b4de103c309ab38ae3462ef4c64",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/prototype-report.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "release-checklist-template.md",
+      "source_path": ".claude/docs/templates/release-checklist-template.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "6852331b51b07fc2c9aaa83b553789d5c63c03c3",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/release-checklist-template.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "release-notes.md",
+      "source_path": ".claude/docs/templates/release-notes.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "6771809c2f22705598995c6e58677bb2a3672e3c",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/release-notes.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "risk-register-entry.md",
+      "source_path": ".claude/docs/templates/risk-register-entry.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "2dcc3dfc6b972b80d6a4e49a3c24bf8e3597aac5",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/risk-register-entry.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "skill-test-spec.md",
+      "source_path": ".claude/docs/templates/skill-test-spec.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c39f7037ea56410c555a60aaf76c0854d3d141a3",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/skill-test-spec.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "sound-bible.md",
+      "source_path": ".claude/docs/templates/sound-bible.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "3a9904d06266a782ff3b4a03a2c6e0b6ebe043ba",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/sound-bible.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "sprint-plan.md",
+      "source_path": ".claude/docs/templates/sprint-plan.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "37957ae4d7aa8af40f1290f30e631071049d4d08",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/sprint-plan.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "systems-index.md",
+      "source_path": ".claude/docs/templates/systems-index.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "6baff149a4fc47ed3af93f37bbb362720bdd35c1",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/systems-index.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "technical-design-document.md",
+      "source_path": ".claude/docs/templates/technical-design-document.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "2abac282e68fa0d84a119e80ed629348a77c4ad4",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/technical-design-document.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "test-evidence.md",
+      "source_path": ".claude/docs/templates/test-evidence.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "b9b52da9bff989b4333fc1bc827c203e8216906e",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/test-evidence.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "test-plan.md",
+      "source_path": ".claude/docs/templates/test-plan.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "2b3489d127a1964e27ce59ea42c7fd52415e6ac2",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/test-plan.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "ux-spec.md",
+      "source_path": ".claude/docs/templates/ux-spec.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "4a0c8505c32f7994d6bbc60ac16ac24c30cb9e04",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/ux-spec.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    },
+    {
+      "kind": "template",
+      "id": "vertical-slice-report.md",
+      "source_path": ".claude/docs/templates/vertical-slice-report.md",
+      "source_commit": "984023ddac0d5e27624f2baacde6105e45de375f",
+      "source_blob": "c30fb960cfed1ca7b94b8d6360c40d9b034da47c",
+      "destination": "plugins/ai-game-studio-automation/templates/upstream/vertical-slice-report.md",
+      "status": "ported",
+      "tests": [
+        "parity-count",
+        "relative-path-preserved",
+        "codex-runtime-scan"
+      ]
+    }
+  ],
+  "native_skills": [
+    {
+      "id": "toolchain-doctor",
+      "destination": "plugins/ai-game-studio/skills/toolchain-doctor/SKILL.md",
+      "status": "native",
+      "tests": [
+        "skill-frontmatter",
+        "skill-metadata",
+        "production-quality-gates"
+      ]
+    },
+    {
+      "id": "tool-discover",
+      "destination": "plugins/ai-game-studio/skills/tool-discover/SKILL.md",
+      "status": "native",
+      "tests": [
+        "skill-frontmatter",
+        "skill-metadata",
+        "production-quality-gates"
+      ]
+    },
+    {
+      "id": "prompt-to-game",
+      "destination": "plugins/ai-game-studio/skills/prompt-to-game/SKILL.md",
+      "status": "native",
+      "tests": [
+        "skill-frontmatter",
+        "skill-metadata",
+        "production-quality-gates"
+      ]
+    },
+    {
+      "id": "sprite-generate",
+      "destination": "plugins/ai-game-studio/skills/sprite-generate/SKILL.md",
+      "status": "native",
+      "tests": [
+        "skill-frontmatter",
+        "skill-metadata",
+        "production-quality-gates"
+      ]
+    },
+    {
+      "id": "asset-3d-generate",
+      "destination": "plugins/ai-game-studio/skills/asset-3d-generate/SKILL.md",
+      "status": "native",
+      "tests": [
+        "skill-frontmatter",
+        "skill-metadata",
+        "production-quality-gates"
+      ]
+    },
+    {
+      "id": "material-texture-generate",
+      "destination": "plugins/ai-game-studio/skills/material-texture-generate/SKILL.md",
+      "status": "native",
+      "tests": [
+        "skill-frontmatter",
+        "skill-metadata",
+        "production-quality-gates"
+      ]
+    },
+    {
+      "id": "rig-animation",
+      "destination": "plugins/ai-game-studio/skills/rig-animation/SKILL.md",
+      "status": "native",
+      "tests": [
+        "skill-frontmatter",
+        "skill-metadata",
+        "production-quality-gates"
+      ]
+    },
+    {
+      "id": "world-generate",
+      "destination": "plugins/ai-game-studio/skills/world-generate/SKILL.md",
+      "status": "native",
+      "tests": [
+        "skill-frontmatter",
+        "skill-metadata",
+        "production-quality-gates"
+      ]
+    },
+    {
+      "id": "npc-audio-generate",
+      "destination": "plugins/ai-game-studio/skills/npc-audio-generate/SKILL.md",
+      "status": "native",
+      "tests": [
+        "skill-frontmatter",
+        "skill-metadata",
+        "production-quality-gates"
+      ]
+    },
+    {
+      "id": "engine-automation",
+      "destination": "plugins/ai-game-studio/skills/engine-automation/SKILL.md",
+      "status": "native",
+      "tests": [
+        "skill-frontmatter",
+        "skill-metadata",
+        "production-quality-gates"
+      ]
+    },
+    {
+      "id": "visual-qa",
+      "destination": "plugins/ai-game-studio/skills/visual-qa/SKILL.md",
+      "status": "native",
+      "tests": [
+        "skill-frontmatter",
+        "skill-metadata",
+        "production-quality-gates"
+      ]
+    },
+    {
+      "id": "quality-enhance",
+      "destination": "plugins/ai-game-studio/skills/quality-enhance/SKILL.md",
+      "status": "native",
+      "tests": [
+        "skill-frontmatter",
+        "skill-metadata",
+        "production-quality-gates"
+      ]
+    }
+  ]
+}

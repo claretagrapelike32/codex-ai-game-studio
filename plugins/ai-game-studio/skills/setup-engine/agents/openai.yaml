@@ -1,0 +1,6 @@
+interface:
+  display_name: "Setup Engine"
+  short_description: "Configure the project's game engine and version. Pins the"
+  default_prompt: "Use $ai-game-studio:setup-engine to inspect compatibility and propose one reversible engine setup without changing anything yet."
+policy:
+  allow_implicit_invocation: false

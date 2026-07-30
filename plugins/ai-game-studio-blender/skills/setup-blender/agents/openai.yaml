@@ -1,0 +1,6 @@
+interface:
+  display_name: "Set up Blender MCP"
+  short_description: "Propose the pinned Blender adapter"
+  default_prompt: "Use $ai-game-studio-blender:setup-blender to inspect Blender and this game project, then propose the pinned local MCP adapter without installing it."
+policy:
+  allow_implicit_invocation: false

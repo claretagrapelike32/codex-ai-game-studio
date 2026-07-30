@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://frabcd.github.io/codex-ai-game-studio/schemas/parity-ledger.schema.json",
+  "title": "Codex AI Game Studio parity ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "source",
+    "expected",
+    "actual",
+    "entries",
+    "native_skills"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "version": {
+      "const": 1
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "commit",
+        "license",
+        "attribution",
+        "verified_date"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "format": "uri"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "license": {
+          "const": "MIT"
+        },
+        "attribution": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verified_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "expected": {
+      "$ref": "#/$defs/counts"
+    },
+    "actual": {
+      "$ref": "#/$defs/counts"
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 185,
+      "maxItems": 185,
+      "items": {
+        "$ref": "#/$defs/derivedEntry"
+      }
+    },
+    "native_skills": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/nativeSkill"
+      }
+    }
+  },
+  "$defs": {
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "skill",
+        "role",
+        "hook-behavior",
+        "rule",
+        "template",
+        "native-skill",
+        "total-core-skills"
+      ],
+      "properties": {
+        "skill": {
+          "const": 73
+        },
+        "role": {
+          "const": 49
+        },
+        "hook-behavior": {
+          "const": 12
+        },
+        "rule": {
+          "const": 11
+        },
+        "template": {
+          "const": 40
+        },
+        "native-skill": {
+          "const": 12
+        },
+        "total-core-skills": {
+          "const": 85
+        }
+      }
+    },
+    "derivedEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id",
+        "source_path",
+        "source_commit",
+        "source_blob",
+        "destination",
+        "status",
+        "tests"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "skill",
+            "role",
+            "hook-behavior",
+            "rule",
+            "template"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "source_blob": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "destination": {
+          "type": "string",
+          "minLength": 1
+        },
+        "supporting_files": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "codex_mappings": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "status": {
+          "enum": [
+            "ported",
+            "replaced",
+            "not-applicable"
+          ]
+        },
+        "tests": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "hook-behavior"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "codex_mappings"
+            ],
+            "properties": {
+              "status": {
+                "const": "replaced"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "status": {
+                "const": "ported"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "nativeSkill": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "destination",
+        "status",
+        "tests"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "destination": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "const": "native"
+        },
+        "tests": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use Codex AI Game Studio in research or production tooling, cite this software release."
+title: "Codex AI Game Studio"
+type: software
+version: 1.0.0
+date-released: 2026-07-30
+license: MIT
+authors:
+  - name: frabcd
+repository-code: "https://github.com/frabcd/codex-ai-game-studio"
+url: "https://frabcd.github.io/codex-ai-game-studio/"
+abstract: "A safety-first Codex plugin for cross-platform AI game production, generative asset routing, editor automation planning, and quality gates."
+keywords:
+  - OpenAI Codex
+  - game development
+  - generative AI
+  - model context protocol
+  - visual quality assurance

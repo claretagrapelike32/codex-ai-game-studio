@@ -1,0 +1,87 @@
+{
+  "id": "blender",
+  "plugin": "ai-game-studio-blender",
+  "host_application": "Blender",
+  "supported_os": [
+    "Windows",
+    "Darwin",
+    "Linux"
+  ],
+  "supported_architectures": [
+    "amd64",
+    "x86_64",
+    "arm64",
+    "aarch64"
+  ],
+  "upstream": {
+    "repository": "ahujasid/blender-mcp",
+    "url": "https://github.com/ahujasid/blender-mcp",
+    "ref": "e3ece087adecce4242d4dc3e4db28c33010b51c4",
+    "license": "MIT",
+    "verified_at": "2026-07-30"
+  },
+  "alternatives": [],
+  "requirements": {
+    "host": "Blender 3.0+",
+    "runtimes": [
+      "Python 3.10+",
+      "uv/uvx with Python 3.11 recommended by upstream"
+    ],
+    "credentials": [
+      "BLENDER_HOST",
+      "BLENDER_PORT"
+    ]
+  },
+  "permissions": [
+    "read and write selected Blender and exported game assets",
+    "spawn a user-approved local MCP executable",
+    "open localhost socket to the Blender addon",
+    "execute high-trust Python inside Blender when explicitly requested",
+    "optional HTTPS download after confirmation"
+  ],
+  "health_checks": [
+    "validate project selection and executable SHA-256",
+    "confirm Blender version",
+    "perform a read-only scene query after the user starts the addon"
+  ],
+  "uninstall": [
+    "plan pack disable blender",
+    "disable/remove the Blender addon only after separate confirmation"
+  ],
+  "rollback": [
+    "restore project.json and lock.json from the transaction backup",
+    "restore addon and source assets from separately planned backups"
+  ],
+  "schema_version": 1,
+  "version": "1.0.0",
+  "distribution": "local-codex-marketplace",
+  "activation": {
+    "mode": "confirmed-transaction-only",
+    "project_state": ".ai-game-studio/project.json",
+    "lock_file": ".ai-game-studio/lock.json",
+    "single_server_per_host": true
+  },
+  "command_arguments": [
+    "--pack",
+    "blender"
+  ],
+  "conflicts": [
+    "host:blender"
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/ahujasid/blender-mcp/archive/e3ece087adecce4242d4dc3e4db28c33010b51c4.zip",
+      "ref": "e3ece087adecce4242d4dc3e4db28c33010b51c4",
+      "automatic": false,
+      "expected_size_bytes": null,
+      "reason": "External source reference; download only after proposal confirmation and license review."
+    }
+  ],
+  "adapter": {
+    "transport": "stdio",
+    "launcher": "scripts/mcp_adapter.py",
+    "shell": false,
+    "external_executable_must_be_absolute": true,
+    "external_executable_sha256_required": true
+  }
+}

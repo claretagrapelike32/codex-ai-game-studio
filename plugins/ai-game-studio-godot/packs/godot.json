@@ -1,0 +1,91 @@
+{
+  "id": "godot",
+  "plugin": "ai-game-studio-godot",
+  "host_application": "Godot Editor",
+  "supported_os": [
+    "Windows",
+    "Darwin",
+    "Linux"
+  ],
+  "supported_architectures": [
+    "amd64",
+    "x86_64",
+    "arm64",
+    "aarch64"
+  ],
+  "upstream": {
+    "repository": "Coding-Solo/godot-mcp",
+    "url": "https://github.com/Coding-Solo/godot-mcp",
+    "ref": "1209744fad78f3998f98c7394fd0f6ef50da5281",
+    "license": "MIT",
+    "verified_at": "2026-07-30"
+  },
+  "alternatives": [
+    {
+      "repository": "IvanMurzak/Godot-MCP",
+      "url": "https://github.com/IvanMurzak/Godot-MCP",
+      "ref": "eba58e0c6a305f34c53ddf855307935358dee325",
+      "license": "Apache-2.0",
+      "active": false,
+      "selection_note": "Compare transport, tool coverage, and engine-version support before substitution."
+    }
+  ],
+  "requirements": {
+    "host": "Godot 4 project",
+    "runtimes": [
+      "Node.js 18+ for the default upstream server"
+    ],
+    "credentials": []
+  },
+  "permissions": [
+    "read and write the selected Godot project",
+    "spawn a user-approved local MCP executable",
+    "launch or stop a Godot project when explicitly requested",
+    "optional HTTPS download after confirmation"
+  ],
+  "health_checks": [
+    "validate project selection and executable SHA-256",
+    "confirm project.godot is present",
+    "perform a read-only MCP version query after the user starts the server"
+  ],
+  "uninstall": [
+    "plan pack disable godot",
+    "remove an editor addon only after separate confirmation"
+  ],
+  "rollback": [
+    "restore project.json and lock.json from the transaction backup",
+    "restore any replaced host selection"
+  ],
+  "schema_version": 1,
+  "version": "1.0.0",
+  "distribution": "local-codex-marketplace",
+  "activation": {
+    "mode": "confirmed-transaction-only",
+    "project_state": ".ai-game-studio/project.json",
+    "lock_file": ".ai-game-studio/lock.json",
+    "single_server_per_host": true
+  },
+  "command_arguments": [
+    "--pack",
+    "godot"
+  ],
+  "conflicts": [
+    "host:godot"
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/Coding-Solo/godot-mcp/archive/1209744fad78f3998f98c7394fd0f6ef50da5281.zip",
+      "ref": "1209744fad78f3998f98c7394fd0f6ef50da5281",
+      "automatic": false,
+      "expected_size_bytes": null,
+      "reason": "External source reference; download only after proposal confirmation and license review."
+    }
+  ],
+  "adapter": {
+    "transport": "stdio",
+    "launcher": "scripts/mcp_adapter.py",
+    "shell": false,
+    "external_executable_must_be_absolute": true,
+    "external_executable_sha256_required": true
+  }
+}

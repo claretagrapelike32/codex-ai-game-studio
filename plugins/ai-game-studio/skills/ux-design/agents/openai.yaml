@@ -1,0 +1,6 @@
+interface:
+  display_name: "Ux Design"
+  short_description: "Guided, section-by-section UX spec authoring for a screen,"
+  default_prompt: "Use $ai-game-studio:ux-design to guided, section-by-section UX spec authoring for a screen, for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

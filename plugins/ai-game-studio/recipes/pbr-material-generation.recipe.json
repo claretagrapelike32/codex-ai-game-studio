@@ -1,0 +1,111 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "pbr-material-generation",
+  "title": "Generate and validate PBR materials",
+  "description": "A reversible, evidence-producing workflow for generate and validate pbr materials.",
+  "inputs": [
+    "material_brief",
+    "mesh_uvs",
+    "resolution_budget",
+    "render_pipeline"
+  ],
+  "ordered_stages": [
+    {
+      "order": 1,
+      "id": "spec",
+      "action": "Define texel density, channels, color space, tiling, packing, and engine shader target."
+    },
+    {
+      "order": 2,
+      "id": "generate",
+      "action": "Generate albedo, normal, roughness, metallic, AO, and height candidates."
+    },
+    {
+      "order": 3,
+      "id": "sanitize",
+      "action": "Remove baked lighting, correct normal orientation, clamp values, and repair seams."
+    },
+    {
+      "order": 4,
+      "id": "pack",
+      "action": "Resize and pack channels without overwriting source maps."
+    },
+    {
+      "order": 5,
+      "id": "review",
+      "action": "Render neutral-light turntables and inspect at gameplay distances."
+    }
+  ],
+  "required_capabilities": [
+    "texture-generation",
+    "visual-quality",
+    "asset-validation"
+  ],
+  "expected_artifacts": [
+    "material-spec.json",
+    "source-maps/",
+    "packed-maps/",
+    "turntable/",
+    "material-report.json"
+  ],
+  "quality_gates": [
+    {
+      "id": "rights",
+      "description": "Verify rights, consent, code, weights, datasets, output terms, and generation provenance.",
+      "human_required": true
+    },
+    {
+      "id": "technical-format",
+      "description": "Validate formats and domain-specific technical constraints.",
+      "human_required": false
+    },
+    {
+      "id": "visual-temporal",
+      "description": "Check visual identity and temporal consistency across relevant views and frames.",
+      "human_required": false
+    },
+    {
+      "id": "runtime-budget",
+      "description": "Check memory, frame time, draw calls, load time, and asset budgets.",
+      "human_required": false
+    },
+    {
+      "id": "playability",
+      "description": "Run interaction and playability smoke tests in the target runtime.",
+      "human_required": false
+    },
+    {
+      "id": "regression-evidence",
+      "description": "Store screenshots, artifacts, logs, versions, and comparison evidence.",
+      "human_required": false
+    },
+    {
+      "id": "human-approval",
+      "description": "Require human approval before replacing any source or production asset.",
+      "human_required": true
+    },
+    {
+      "id": "specific-1",
+      "description": "Maps use the expected color spaces and channel conventions.",
+      "human_required": false
+    },
+    {
+      "id": "specific-2",
+      "description": "Seams, tiling, energy response, texel density, and memory budget pass.",
+      "human_required": false
+    }
+  ],
+  "fallbacks": [
+    "Bake a conventional material in Blender.",
+    "Ship a neutral verified material while generated maps remain under review."
+  ],
+  "provenance_outputs": [
+    "source-input-hashes.json",
+    "generation-settings.json",
+    "dependency-pins.json",
+    "quality-evidence/",
+    "human-approval.json"
+  ],
+  "mutation_policy": "plan-confirmed-digest-before-apply"
+}

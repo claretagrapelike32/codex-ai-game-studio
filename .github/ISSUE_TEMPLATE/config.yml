@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and workflow help
+    url: https://github.com/frabcd/codex-ai-game-studio/discussions
+    about: Ask setup, prompting, engine, and workflow questions in Discussions.
+  - name: Security vulnerability
+    url: https://github.com/frabcd/codex-ai-game-studio/security/advisories/new
+    about: Report vulnerabilities privately. Do not open a public issue.
+  - name: Support and troubleshooting
+    url: https://frabcd.github.io/codex-ai-game-studio/support/
+    about: Read supported environments, diagnostics, and escalation guidance.

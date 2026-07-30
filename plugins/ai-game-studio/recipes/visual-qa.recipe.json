@@ -1,0 +1,111 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "visual-qa",
+  "title": "Run multi-view visual and temporal QA",
+  "description": "A reversible, evidence-producing workflow for run multi-view visual and temporal qa.",
+  "inputs": [
+    "reference_set",
+    "candidate_artifacts",
+    "capture_matrix",
+    "acceptance_thresholds"
+  ],
+  "ordered_stages": [
+    {
+      "order": 1,
+      "id": "baseline",
+      "action": "Lock references, views, camera, lighting, resolution, and tolerances."
+    },
+    {
+      "order": 2,
+      "id": "capture",
+      "action": "Capture deterministic stills and temporal samples across the matrix."
+    },
+    {
+      "order": 3,
+      "id": "measure",
+      "action": "Run format-aware metrics without treating any single score as authoritative."
+    },
+    {
+      "order": 4,
+      "id": "review",
+      "action": "Inspect silhouette, palette, identity, artifacts, motion, and gameplay readability."
+    },
+    {
+      "order": 5,
+      "id": "report",
+      "action": "Store annotated comparisons and request a human accept, revise, or reject decision."
+    }
+  ],
+  "required_capabilities": [
+    "visual-quality",
+    "playtesting",
+    "asset-validation"
+  ],
+  "expected_artifacts": [
+    "capture-matrix.json",
+    "baseline/",
+    "candidate/",
+    "diffs/",
+    "visual-qa-report.html"
+  ],
+  "quality_gates": [
+    {
+      "id": "rights",
+      "description": "Verify rights, consent, code, weights, datasets, output terms, and generation provenance.",
+      "human_required": true
+    },
+    {
+      "id": "technical-format",
+      "description": "Validate formats and domain-specific technical constraints.",
+      "human_required": false
+    },
+    {
+      "id": "visual-temporal",
+      "description": "Check visual identity and temporal consistency across relevant views and frames.",
+      "human_required": false
+    },
+    {
+      "id": "runtime-budget",
+      "description": "Check memory, frame time, draw calls, load time, and asset budgets.",
+      "human_required": false
+    },
+    {
+      "id": "playability",
+      "description": "Run interaction and playability smoke tests in the target runtime.",
+      "human_required": false
+    },
+    {
+      "id": "regression-evidence",
+      "description": "Store screenshots, artifacts, logs, versions, and comparison evidence.",
+      "human_required": false
+    },
+    {
+      "id": "human-approval",
+      "description": "Require human approval before replacing any source or production asset.",
+      "human_required": true
+    },
+    {
+      "id": "specific-1",
+      "description": "Multiple gameplay-relevant views and temporal samples are reviewed.",
+      "human_required": false
+    },
+    {
+      "id": "specific-2",
+      "description": "Automated metrics are corroborated by artifact evidence and human review.",
+      "human_required": false
+    }
+  ],
+  "fallbacks": [
+    "Use deterministic screenshot diffs when learned metrics are unavailable.",
+    "Escalate ambiguous changes to side-by-side human review."
+  ],
+  "provenance_outputs": [
+    "source-input-hashes.json",
+    "generation-settings.json",
+    "dependency-pins.json",
+    "quality-evidence/",
+    "human-approval.json"
+  ],
+  "mutation_policy": "plan-confirmed-digest-before-apply"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Release Checklist"
+  short_description: "Generates a comprehensive pre-release validation checklist"
+  default_prompt: "Use $ai-game-studio:release-checklist to generates a comprehensive pre-release validation checklist for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Asset Audit"
+  short_description: "Audits game assets for compliance with naming conventions,"
+  default_prompt: "Use $ai-game-studio:asset-audit to audits game assets for compliance with naming conventions, for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

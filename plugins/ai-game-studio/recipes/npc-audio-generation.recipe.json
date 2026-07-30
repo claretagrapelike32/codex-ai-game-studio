@@ -1,0 +1,111 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "npc-audio-generation",
+  "title": "Generate NPC dialogue, quests, voice, music, and sound",
+  "description": "A reversible, evidence-producing workflow for generate npc dialogue, quests, voice, music, and sound.",
+  "inputs": [
+    "narrative_bible",
+    "npc_profile",
+    "consent_records",
+    "audio_budget"
+  ],
+  "ordered_stages": [
+    {
+      "order": 1,
+      "id": "rights",
+      "action": "Verify identity, voice, music, dataset, and output rights before generation."
+    },
+    {
+      "order": 2,
+      "id": "design",
+      "action": "Define state constraints, safety boundaries, quest invariants, and fallback lines."
+    },
+    {
+      "order": 3,
+      "id": "generate",
+      "action": "Generate structured dialogue and audio candidates with provenance."
+    },
+    {
+      "order": 4,
+      "id": "validate",
+      "action": "Check state consistency, pronunciation, peaks, loudness, duration, and loop seams."
+    },
+    {
+      "order": 5,
+      "id": "integrate",
+      "action": "Import approved copies and test interruption, replay, localization, and fallback behavior."
+    }
+  ],
+  "required_capabilities": [
+    "npc-dialogue",
+    "audio-generation",
+    "voice-generation"
+  ],
+  "expected_artifacts": [
+    "consent-record.json",
+    "dialogue-graph.json",
+    "audio/",
+    "loudness-report.json",
+    "npc-test-report.json"
+  ],
+  "quality_gates": [
+    {
+      "id": "rights",
+      "description": "Verify rights, consent, code, weights, datasets, output terms, and generation provenance.",
+      "human_required": true
+    },
+    {
+      "id": "technical-format",
+      "description": "Validate formats and domain-specific technical constraints.",
+      "human_required": false
+    },
+    {
+      "id": "visual-temporal",
+      "description": "Check visual identity and temporal consistency across relevant views and frames.",
+      "human_required": false
+    },
+    {
+      "id": "runtime-budget",
+      "description": "Check memory, frame time, draw calls, load time, and asset budgets.",
+      "human_required": false
+    },
+    {
+      "id": "playability",
+      "description": "Run interaction and playability smoke tests in the target runtime.",
+      "human_required": false
+    },
+    {
+      "id": "regression-evidence",
+      "description": "Store screenshots, artifacts, logs, versions, and comparison evidence.",
+      "human_required": false
+    },
+    {
+      "id": "human-approval",
+      "description": "Require human approval before replacing any source or production asset.",
+      "human_required": true
+    },
+    {
+      "id": "specific-1",
+      "description": "Unlicensed identity references or voice cloning without consent block production use.",
+      "human_required": false
+    },
+    {
+      "id": "specific-2",
+      "description": "Audio peaks, loudness, loop seams, dialogue state, and quest invariants pass.",
+      "human_required": false
+    }
+  ],
+  "fallbacks": [
+    "Use text-only dialogue or a licensed synthetic stock voice.",
+    "Use deterministic authored fallback lines when generation is unavailable."
+  ],
+  "provenance_outputs": [
+    "source-input-hashes.json",
+    "generation-settings.json",
+    "dependency-pins.json",
+    "quality-evidence/",
+    "human-approval.json"
+  ],
+  "mutation_policy": "plan-confirmed-digest-before-apply"
+}

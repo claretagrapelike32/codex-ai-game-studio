@@ -1,0 +1,6 @@
+interface:
+  display_name: "Npc Audio Generate"
+  short_description: "Generate NPC, dialogue, voice, and audio"
+  default_prompt: "Use $ai-game-studio:npc-audio-generate to design consented NPC dialogue, voice, music, or sound with integration gates."
+policy:
+  allow_implicit_invocation: true

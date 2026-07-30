@@ -1,0 +1,17 @@
+{
+  "session_id": "thr_fixture",
+  "turn_id": "turn_fixture",
+  "transcript_path": null,
+  "cwd": "__PROJECT__",
+  "hook_event_name": "PostToolUse",
+  "model": "gpt-fixture",
+  "permission_mode": "default",
+  "tool_name": "apply_patch",
+  "tool_use_id": "tool_fixture",
+  "tool_input": {
+    "command": "*** Begin Patch\n*** Update File: assets/generated.png\n*** End Patch"
+  },
+  "tool_response": {
+    "output": "Done"
+  }
+}

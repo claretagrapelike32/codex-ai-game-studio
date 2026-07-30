@@ -1,0 +1,6 @@
+interface:
+  display_name: "Localize"
+  short_description: "Full localization pipeline: scan for hardcoded strings,"
+  default_prompt: "Use $ai-game-studio:localize to full localization pipeline: scan for hardcoded strings, for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

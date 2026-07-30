@@ -1,0 +1,6 @@
+interface:
+  display_name: "Test Flakiness"
+  short_description: "Detect non-deterministic (flaky) tests by reading CI run"
+  default_prompt: "Use $ai-game-studio:test-flakiness to detect non-deterministic (flaky) tests by reading CI run for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

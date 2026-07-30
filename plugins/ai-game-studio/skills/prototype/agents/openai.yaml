@@ -1,0 +1,6 @@
+interface:
+  display_name: "Prototype"
+  short_description: "Concept prototype — validate the core idea is worth"
+  default_prompt: "Use $ai-game-studio:prototype to concept prototype — validate the core idea is worth for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

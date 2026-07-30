@@ -1,0 +1,6 @@
+interface:
+  display_name: "Regression Suite"
+  short_description: "Map test coverage to GDD critical paths, identify fixed bugs"
+  default_prompt: "Use $ai-game-studio:regression-suite to map test coverage to GDD critical paths, identify fixed bugs for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

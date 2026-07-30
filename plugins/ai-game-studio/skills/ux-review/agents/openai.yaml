@@ -1,0 +1,6 @@
+interface:
+  display_name: "Ux Review"
+  short_description: "Validates a UX spec, HUD design, or interaction pattern"
+  default_prompt: "Use $ai-game-studio:ux-review to validates a UX spec, HUD design, or interaction pattern for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

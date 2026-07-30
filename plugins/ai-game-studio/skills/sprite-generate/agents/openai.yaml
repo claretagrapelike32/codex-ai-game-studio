@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sprite Generate"
+  short_description: "Generate consistent production-ready sprites"
+  default_prompt: "Use $ai-game-studio:sprite-generate to plan and validate a consistent transparent sprite animation."
+policy:
+  allow_implicit_invocation: true

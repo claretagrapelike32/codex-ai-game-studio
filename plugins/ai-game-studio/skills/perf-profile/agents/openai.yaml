@@ -1,0 +1,6 @@
+interface:
+  display_name: "Perf Profile"
+  short_description: "Structured performance profiling workflow. Identifies"
+  default_prompt: "Use $ai-game-studio:perf-profile to structured performance profiling workflow. Identifies for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

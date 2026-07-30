@@ -1,0 +1,6 @@
+interface:
+  display_name: "World Generate"
+  short_description: "Generate playable worlds and environments"
+  default_prompt: "Use $ai-game-studio:world-generate to create a reversible, navigable environment from these design constraints."
+policy:
+  allow_implicit_invocation: true

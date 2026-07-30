@@ -1,0 +1,6 @@
+interface:
+  display_name: "Bug Report"
+  short_description: "Creates a structured bug report from a description, or"
+  default_prompt: "Use $ai-game-studio:bug-report to creates a structured bug report from a description, or for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Art Bible"
+  short_description: "Guided, section-by-section Art Bible authoring. Creates the"
+  default_prompt: "Use $ai-game-studio:art-bible to guided, section-by-section Art Bible authoring. Creates the for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

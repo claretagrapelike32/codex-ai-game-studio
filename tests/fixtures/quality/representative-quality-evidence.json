@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "1.0.0",
+  "generated_at": "2026-07-30T00:00:00Z",
+  "fixture_policy": "synthetic-rights-cleared-no-external-tools",
+  "fixtures": [
+    {
+      "id": "sprite-baseline-v1",
+      "type": "sprite",
+      "source": "fixture://sprite-baseline-v1/before",
+      "candidate": "fixture://sprite-baseline-v1/after",
+      "rights": {"license": "CC0-1.0", "identity_or_voice": false, "consent_required": false},
+      "checks": [
+        {"id": "transparent-alpha", "before": true, "after": true, "operator": "equals", "threshold": true, "status": "pass"},
+        {"id": "frame-size", "before": "96x112", "after": "96x112", "operator": "equals", "threshold": "96x112", "status": "pass"},
+        {"id": "baseline-variance-px", "before": 3, "after": 0, "operator": "less-than-or-equal", "threshold": 0, "status": "pass"},
+        {"id": "loop-seam-px", "before": 4, "after": 0, "operator": "less-than-or-equal", "threshold": 0, "status": "pass"},
+        {"id": "pixel-content-changes", "before": 0, "after": 0, "operator": "equals", "threshold": 0, "status": "pass"}
+      ],
+      "evidence": ["assets/examples/sprite-before-after.svg"],
+      "human_approval": {"required": true, "status": "approved-for-fixture"},
+      "overall": "pass"
+    },
+    {
+      "id": "mesh-realtime-prop-v1",
+      "type": "mesh-3d",
+      "source": "fixture://mesh/realtime-prop",
+      "candidate": "fixture://mesh/realtime-prop-validated",
+      "rights": {"license": "CC0-1.0", "identity_or_voice": false, "consent_required": false},
+      "checks": [
+        {"id": "triangle-count", "before": 24112, "after": 24112, "operator": "less-than-or-equal", "threshold": 25000, "status": "pass"},
+        {"id": "non-manifold-edges", "before": 0, "after": 0, "operator": "equals", "threshold": 0, "status": "pass"},
+        {"id": "invalid-normals", "before": 0, "after": 0, "operator": "equals", "threshold": 0, "status": "pass"},
+        {"id": "uv-overlap-percent", "before": 0.7, "after": 0.7, "operator": "less-than-or-equal", "threshold": 1.0, "status": "pass"},
+        {"id": "lod-count", "before": 3, "after": 3, "operator": "greater-than-or-equal", "threshold": 3, "status": "pass"},
+        {"id": "collision-present", "before": true, "after": true, "operator": "equals", "threshold": true, "status": "pass"}
+      ],
+      "evidence": ["fixture://mesh/wireframe", "fixture://mesh/turntable", "fixture://mesh/import-report"],
+      "human_approval": {"required": true, "status": "approved-for-fixture"},
+      "overall": "pass"
+    },
+    {
+      "id": "rig-locomotion-v1",
+      "type": "rig-animation",
+      "source": "fixture://rig/locomotion",
+      "candidate": "fixture://rig/locomotion-retargeted",
+      "rights": {"license": "CC0-1.0", "identity_or_voice": false, "consent_required": false},
+      "checks": [
+        {"id": "unweighted-vertices", "before": 0, "after": 0, "operator": "equals", "threshold": 0, "status": "pass"},
+        {"id": "max-foot-slide-cm", "before": 1.2, "after": 1.2, "operator": "less-than-or-equal", "threshold": 2.0, "status": "pass"},
+        {"id": "loop-position-error-m", "before": 0.004, "after": 0.004, "operator": "less-than-or-equal", "threshold": 0.01, "status": "pass"},
+        {"id": "root-motion-discontinuities", "before": 0, "after": 0, "operator": "equals", "threshold": 0, "status": "pass"}
+      ],
+      "evidence": ["fixture://rig/weight-heatmap", "fixture://rig/contact-overlay", "fixture://rig/engine-import"],
+      "human_approval": {"required": true, "status": "approved-for-fixture"},
+      "overall": "pass"
+    },
+    {
+      "id": "audio-ambience-loop-v1",
+      "type": "audio",
+      "source": "fixture://audio/ambience-loop",
+      "candidate": "fixture://audio/ambience-loop-master",
+      "rights": {"license": "CC0-1.0", "identity_or_voice": false, "consent_required": false},
+      "checks": [
+        {"id": "true-peak-dbtp", "before": -1.2, "after": -1.2, "operator": "less-than-or-equal", "threshold": -1.0, "status": "pass"},
+        {"id": "integrated-loudness-lufs", "before": -16.0, "after": -16.0, "operator": "within", "threshold": {"target": -16.0, "tolerance": 1.0}, "status": "pass"},
+        {"id": "loop-seam-dbfs", "before": -55.0, "after": -55.0, "operator": "less-than-or-equal", "threshold": -50.0, "status": "pass"},
+        {"id": "clipped-samples", "before": 0, "after": 0, "operator": "equals", "threshold": 0, "status": "pass"}
+      ],
+      "evidence": ["fixture://audio/waveform", "fixture://audio/loudness-report", "fixture://audio/loop-diff"],
+      "human_approval": {"required": true, "status": "approved-for-fixture"},
+      "overall": "pass"
+    },
+    {
+      "id": "scene-greybox-v1",
+      "type": "scene",
+      "source": "fixture://scene/greybox",
+      "candidate": "fixture://scene/greybox-validated",
+      "rights": {"license": "CC0-1.0", "identity_or_voice": false, "consent_required": false},
+      "checks": [
+        {"id": "spawn-goal-reachability-percent", "before": 100, "after": 100, "operator": "equals", "threshold": 100, "status": "pass"},
+        {"id": "navigation-islands", "before": 1, "after": 1, "operator": "equals", "threshold": 1, "status": "pass"},
+        {"id": "p95-frame-time-ms", "before": 15.8, "after": 15.8, "operator": "less-than-or-equal", "threshold": 16.67, "status": "pass"},
+        {"id": "peak-memory-mb", "before": 845, "after": 845, "operator": "less-than-or-equal", "threshold": 1024, "status": "pass"},
+        {"id": "draw-calls", "before": 712, "after": 712, "operator": "less-than-or-equal", "threshold": 800, "status": "pass"}
+      ],
+      "evidence": ["fixture://scene/nav-overlay", "fixture://scene/lighting-views", "fixture://scene/profile"],
+      "human_approval": {"required": true, "status": "approved-for-fixture"},
+      "overall": "pass"
+    },
+    {
+      "id": "visual-regression-v1",
+      "type": "visual-regression",
+      "source": "fixture://visual/baseline",
+      "candidate": "fixture://visual/current",
+      "rights": {"license": "CC0-1.0", "identity_or_voice": false, "consent_required": false},
+      "checks": [
+        {"id": "different-pixels-percent", "before": 0.23, "after": 0.23, "operator": "less-than-or-equal", "threshold": 0.5, "status": "pass"},
+        {"id": "ssim", "before": 0.994, "after": 0.994, "operator": "greater-than-or-equal", "threshold": 0.99, "status": "pass"},
+        {"id": "unmasked-camera-drift-px", "before": 0, "after": 0, "operator": "equals", "threshold": 0, "status": "pass"}
+      ],
+      "evidence": ["fixture://visual/baseline.png", "fixture://visual/current.png", "fixture://visual/diff.png"],
+      "human_approval": {"required": true, "status": "approved-for-fixture"},
+      "overall": "pass"
+    },
+    {
+      "id": "gameplay-smoke-v1",
+      "type": "gameplay",
+      "source": "fixture://gameplay/build",
+      "candidate": "fixture://gameplay/build",
+      "rights": {"license": "CC0-1.0", "identity_or_voice": false, "consent_required": false},
+      "checks": [
+        {"id": "launch-success", "before": true, "after": true, "operator": "equals", "threshold": true, "status": "pass"},
+        {"id": "core-action-success", "before": true, "after": true, "operator": "equals", "threshold": true, "status": "pass"},
+        {"id": "win-loss-feedback", "before": true, "after": true, "operator": "equals", "threshold": true, "status": "pass"},
+        {"id": "restart-success", "before": true, "after": true, "operator": "equals", "threshold": true, "status": "pass"},
+        {"id": "crashes", "before": 0, "after": 0, "operator": "equals", "threshold": 0, "status": "pass"}
+      ],
+      "evidence": ["fixture://gameplay/input-trace", "fixture://gameplay/smoke-log", "fixture://gameplay/end-state.png"],
+      "human_approval": {"required": true, "status": "approved-for-fixture"},
+      "overall": "pass"
+    }
+  ]
+}

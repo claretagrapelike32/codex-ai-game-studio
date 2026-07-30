@@ -1,0 +1,6 @@
+interface:
+  display_name: "Visual Qa"
+  short_description: "Run visual and temporal asset QA"
+  default_prompt: "Use $ai-game-studio:visual-qa to run controlled multi-view and temporal QA on this asset or scene."
+policy:
+  allow_implicit_invocation: true

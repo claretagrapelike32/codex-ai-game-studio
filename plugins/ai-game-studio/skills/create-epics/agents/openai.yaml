@@ -1,0 +1,6 @@
+interface:
+  display_name: "Create Epics"
+  short_description: "Translate approved GDDs + architecture into epics — one epic"
+  default_prompt: "Use $ai-game-studio:create-epics to translate approved GDDs + architecture into epics — one epic for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

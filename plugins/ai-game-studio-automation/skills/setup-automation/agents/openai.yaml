@@ -1,0 +1,6 @@
+interface:
+  display_name: "Set up game automation"
+  short_description: "Propose hooks and project agents safely"
+  default_prompt: "Use $ai-game-studio-automation:setup-automation to inspect this game project and propose the optional automation pack without changing files."
+policy:
+  allow_implicit_invocation: false

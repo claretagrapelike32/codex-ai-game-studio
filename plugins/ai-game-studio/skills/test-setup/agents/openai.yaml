@@ -1,0 +1,6 @@
+interface:
+  display_name: "Test Setup"
+  short_description: "Scaffold the test framework and CI/CD pipeline for the"
+  default_prompt: "Use $ai-game-studio:test-setup to scaffold the test framework and CI/CD pipeline for the for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

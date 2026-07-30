@@ -1,0 +1,6 @@
+interface:
+  display_name: "Team Release"
+  short_description: "Orchestrate the release team: coordinates release-manager,"
+  default_prompt: "Use $ai-game-studio:team-release to orchestrate the release team: coordinates release-manager, for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

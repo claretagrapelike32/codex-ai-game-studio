@@ -1,0 +1,6 @@
+interface:
+  display_name: "Dev Story"
+  short_description: "Read a story file and implement it. Loads the full context"
+  default_prompt: "Use $ai-game-studio:dev-story to read a story file and implement it. Loads the full context for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

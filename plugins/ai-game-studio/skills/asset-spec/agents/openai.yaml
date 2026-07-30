@@ -1,0 +1,6 @@
+interface:
+  display_name: "Asset Spec"
+  short_description: "Generate per-asset visual specifications and AI generation"
+  default_prompt: "Use $ai-game-studio:asset-spec to generate per-asset visual specifications and AI generation for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

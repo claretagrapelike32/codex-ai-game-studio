@@ -1,0 +1,6 @@
+interface:
+  display_name: "Code Review"
+  short_description: "Performs an architectural and quality code review on a"
+  default_prompt: "Use $ai-game-studio:code-review to performs an architectural and quality code review on a for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

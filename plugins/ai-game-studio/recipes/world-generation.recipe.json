@@ -1,0 +1,111 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "world-generation",
+  "title": "Generate a playable environment or procedural level",
+  "description": "A reversible, evidence-producing workflow for generate a playable environment or procedural level.",
+  "inputs": [
+    "world_brief",
+    "navigation_rules",
+    "encounter_plan",
+    "runtime_budget"
+  ],
+  "ordered_stages": [
+    {
+      "order": 1,
+      "id": "constraints",
+      "action": "Define bounds, traversal metrics, landmarks, spawn rules, and performance budgets."
+    },
+    {
+      "order": 2,
+      "id": "layout",
+      "action": "Generate candidate layout data separately from art dressing."
+    },
+    {
+      "order": 3,
+      "id": "validate",
+      "action": "Validate connectivity, collision, navigation, reachability, and encounter constraints."
+    },
+    {
+      "order": 4,
+      "id": "dress",
+      "action": "Add lighting and assets while preserving gameplay readability."
+    },
+    {
+      "order": 5,
+      "id": "playtest",
+      "action": "Exercise spawn-to-goal routes and capture frame-time and visual evidence."
+    }
+  ],
+  "required_capabilities": [
+    "world-generation",
+    "procedural-generation",
+    "playtesting"
+  ],
+  "expected_artifacts": [
+    "world-spec.json",
+    "layout/",
+    "navigation-report.json",
+    "performance-capture.json",
+    "walkthrough/"
+  ],
+  "quality_gates": [
+    {
+      "id": "rights",
+      "description": "Verify rights, consent, code, weights, datasets, output terms, and generation provenance.",
+      "human_required": true
+    },
+    {
+      "id": "technical-format",
+      "description": "Validate formats and domain-specific technical constraints.",
+      "human_required": false
+    },
+    {
+      "id": "visual-temporal",
+      "description": "Check visual identity and temporal consistency across relevant views and frames.",
+      "human_required": false
+    },
+    {
+      "id": "runtime-budget",
+      "description": "Check memory, frame time, draw calls, load time, and asset budgets.",
+      "human_required": false
+    },
+    {
+      "id": "playability",
+      "description": "Run interaction and playability smoke tests in the target runtime.",
+      "human_required": false
+    },
+    {
+      "id": "regression-evidence",
+      "description": "Store screenshots, artifacts, logs, versions, and comparison evidence.",
+      "human_required": false
+    },
+    {
+      "id": "human-approval",
+      "description": "Require human approval before replacing any source or production asset.",
+      "human_required": true
+    },
+    {
+      "id": "specific-1",
+      "description": "All required spawns and objectives are reachable.",
+      "human_required": false
+    },
+    {
+      "id": "specific-2",
+      "description": "Navigation, lighting, collision, streaming, and runtime budgets pass.",
+      "human_required": false
+    }
+  ],
+  "fallbacks": [
+    "Use a deterministic procedural layout seed.",
+    "Reduce dressing density before changing navigation-critical geometry."
+  ],
+  "provenance_outputs": [
+    "source-input-hashes.json",
+    "generation-settings.json",
+    "dependency-pins.json",
+    "quality-evidence/",
+    "human-approval.json"
+  ],
+  "mutation_policy": "plan-confirmed-digest-before-apply"
+}

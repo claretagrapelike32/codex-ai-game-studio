@@ -1,0 +1,6 @@
+interface:
+  display_name: "Migrate Claude game studio"
+  short_description: "Plan a reversible Codex migration"
+  default_prompt: "Use $ai-game-studio-automation:migrate-claude to inspect this Claude Code game project and propose a reversible Codex migration."
+policy:
+  allow_implicit_invocation: false

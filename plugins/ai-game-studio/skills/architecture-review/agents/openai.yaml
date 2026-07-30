@@ -1,0 +1,6 @@
+interface:
+  display_name: "Architecture Review"
+  short_description: "Validates completeness and consistency of the project"
+  default_prompt: "Use $ai-game-studio:architecture-review to validates completeness and consistency of the project for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

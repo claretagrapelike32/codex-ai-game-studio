@@ -1,0 +1,111 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "rig-animation",
+  "title": "Rig, retarget, and validate animation",
+  "description": "A reversible, evidence-producing workflow for rig, retarget, and validate animation.",
+  "inputs": [
+    "source_mesh",
+    "target_skeleton",
+    "motion_brief",
+    "engine_import_target"
+  ],
+  "ordered_stages": [
+    {
+      "order": 1,
+      "id": "prepare",
+      "action": "Validate neutral pose, transforms, topology, scale, and skeleton requirements."
+    },
+    {
+      "order": 2,
+      "id": "rig",
+      "action": "Create a candidate skeleton and skin weights on a copy."
+    },
+    {
+      "order": 3,
+      "id": "retarget",
+      "action": "Map bones, root motion, contacts, and animation curves."
+    },
+    {
+      "order": 4,
+      "id": "inspect",
+      "action": "Review deformations, foot sliding, penetration, loop continuity, and joint limits."
+    },
+    {
+      "order": 5,
+      "id": "import",
+      "action": "Test clips in engine with representative state transitions."
+    }
+  ],
+  "required_capabilities": [
+    "rigging",
+    "animation",
+    "engine-control"
+  ],
+  "expected_artifacts": [
+    "rig-map.json",
+    "rigged-source.fbx",
+    "clips/",
+    "deformation-review/",
+    "animation-report.json"
+  ],
+  "quality_gates": [
+    {
+      "id": "rights",
+      "description": "Verify rights, consent, code, weights, datasets, output terms, and generation provenance.",
+      "human_required": true
+    },
+    {
+      "id": "technical-format",
+      "description": "Validate formats and domain-specific technical constraints.",
+      "human_required": false
+    },
+    {
+      "id": "visual-temporal",
+      "description": "Check visual identity and temporal consistency across relevant views and frames.",
+      "human_required": false
+    },
+    {
+      "id": "runtime-budget",
+      "description": "Check memory, frame time, draw calls, load time, and asset budgets.",
+      "human_required": false
+    },
+    {
+      "id": "playability",
+      "description": "Run interaction and playability smoke tests in the target runtime.",
+      "human_required": false
+    },
+    {
+      "id": "regression-evidence",
+      "description": "Store screenshots, artifacts, logs, versions, and comparison evidence.",
+      "human_required": false
+    },
+    {
+      "id": "human-approval",
+      "description": "Require human approval before replacing any source or production asset.",
+      "human_required": true
+    },
+    {
+      "id": "specific-1",
+      "description": "Weights and deformations pass extreme-pose review.",
+      "human_required": false
+    },
+    {
+      "id": "specific-2",
+      "description": "Root motion, contacts, foot sliding, loop continuity, and state transitions pass.",
+      "human_required": false
+    }
+  ],
+  "fallbacks": [
+    "Use a known compatible skeleton and manual weight cleanup.",
+    "Keep source motion and retarget only verified clips."
+  ],
+  "provenance_outputs": [
+    "source-input-hashes.json",
+    "generation-settings.json",
+    "dependency-pins.json",
+    "quality-evidence/",
+    "human-approval.json"
+  ],
+  "mutation_policy": "plan-confirmed-digest-before-apply"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Prompt To Game"
+  short_description: "Turn a prompt into a playable prototype"
+  default_prompt: "Use $ai-game-studio:prompt-to-game to turn this idea into a scoped playable prototype with approval gates."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Patch Notes"
+  short_description: "Generate player-facing patch notes from git history, sprint"
+  default_prompt: "Use $ai-game-studio:patch-notes to generate player-facing patch notes from git history, sprint for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

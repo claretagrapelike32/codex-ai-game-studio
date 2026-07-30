@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sprint Status"
+  short_description: "Fast sprint status check. Reads the current sprint plan,"
+  default_prompt: "Use $ai-game-studio:sprint-status to fast sprint status check. Reads the current sprint plan, for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

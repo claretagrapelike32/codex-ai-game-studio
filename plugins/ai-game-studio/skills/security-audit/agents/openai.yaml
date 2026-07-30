@@ -1,0 +1,6 @@
+interface:
+  display_name: "Security Audit"
+  short_description: "Audit the game for security vulnerabilities: save tampering,"
+  default_prompt: "Use $ai-game-studio:security-audit to audit the game for security vulnerabilities: save tampering, for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

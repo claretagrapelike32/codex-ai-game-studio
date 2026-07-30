@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://frabcd.github.io/codex-ai-game-studio/schemas/catalog-snapshot.schema.json",
+  "title": "Volatile GitHub metadata snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "snapshot_date",
+    "source",
+    "records"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://frabcd.github.io/codex-ai-game-studio/schemas/catalog-snapshot.schema.json"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "snapshot_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "source": {
+      "type": "string"
+    },
+    "records": {
+      "type": "array",
+      "minItems": 163,
+      "maxItems": 163,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "stars",
+          "archived",
+          "latest_release",
+          "last_activity",
+          "retrieval"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "stars": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "archived": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "latest_release": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_activity": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "retrieval": {
+            "enum": [
+              "approximate-source-snapshot",
+              "github-api",
+              "not-recorded"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+name: Engine or DCC pack request
+description: Propose a new adapter or a verified alternative for one host application.
+title: "[Pack]: "
+labels: [pack, enhancement, triage]
+body:
+  - type: input
+    id: host
+    attributes:
+      label: Host application
+      placeholder: Engine, DCC, editor, or pixel-art application and versions
+    validations:
+      required: true
+  - type: input
+    id: upstream
+    attributes:
+      label: Upstream repository and immutable ref
+      placeholder: owner/repository at a full 40-character commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: matrix
+    attributes:
+      label: Compatibility matrix
+      description: OS, architecture, host versions, runtimes, GPU requirements, transport, and conflicts.
+    validations:
+      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: License, permissions, downloads, and security model
+      description: Include code/model/data/output license status, process/filesystem/network access, credential names, and expected download sizes.
+    validations:
+      required: true
+  - type: textarea
+    id: lifecycle
+    attributes:
+      label: Health checks, uninstall, and rollback
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Confirmation contract
+      options:
+        - label: The proposed adapter can remain disabled until a reviewed plan digest is confirmed.
+          required: true
+        - label: The design activates at most one MCP server for the host application.
+          required: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Day One Patch"
+  short_description: "Prepare a day-one patch for a game launch. Scopes,"
+  default_prompt: "Use $ai-game-studio:day-one-patch to prepare a day-one patch for a game launch. Scopes, for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,111 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "asset-3d-generation",
+  "title": "Generate an engine-ready 3D asset",
+  "description": "A reversible, evidence-producing workflow for generate an engine-ready 3d asset.",
+  "inputs": [
+    "asset_brief",
+    "reference_images",
+    "triangle_budget",
+    "engine_import_target"
+  ],
+  "ordered_stages": [
+    {
+      "order": 1,
+      "id": "spec",
+      "action": "Define silhouette, scale, axes, topology, UV, LOD, collision, and material budgets."
+    },
+    {
+      "order": 2,
+      "id": "generate",
+      "action": "Generate isolated candidates and record source model, weights, seed, and references."
+    },
+    {
+      "order": 3,
+      "id": "repair",
+      "action": "Repair topology, normals, UVs, transforms, holes, intersections, and non-manifold geometry."
+    },
+    {
+      "order": 4,
+      "id": "optimize",
+      "action": "Create collision and LODs while preserving silhouette and shading."
+    },
+    {
+      "order": 5,
+      "id": "import",
+      "action": "Validate the exported copy and inspect it from multiple engine views."
+    }
+  ],
+  "required_capabilities": [
+    "mesh-generation",
+    "mesh-processing",
+    "asset-validation"
+  ],
+  "expected_artifacts": [
+    "asset-spec.json",
+    "source-model/",
+    "optimized.glb",
+    "lods/",
+    "engine-import-report.json"
+  ],
+  "quality_gates": [
+    {
+      "id": "rights",
+      "description": "Verify rights, consent, code, weights, datasets, output terms, and generation provenance.",
+      "human_required": true
+    },
+    {
+      "id": "technical-format",
+      "description": "Validate formats and domain-specific technical constraints.",
+      "human_required": false
+    },
+    {
+      "id": "visual-temporal",
+      "description": "Check visual identity and temporal consistency across relevant views and frames.",
+      "human_required": false
+    },
+    {
+      "id": "runtime-budget",
+      "description": "Check memory, frame time, draw calls, load time, and asset budgets.",
+      "human_required": false
+    },
+    {
+      "id": "playability",
+      "description": "Run interaction and playability smoke tests in the target runtime.",
+      "human_required": false
+    },
+    {
+      "id": "regression-evidence",
+      "description": "Store screenshots, artifacts, logs, versions, and comparison evidence.",
+      "human_required": false
+    },
+    {
+      "id": "human-approval",
+      "description": "Require human approval before replacing any source or production asset.",
+      "human_required": true
+    },
+    {
+      "id": "specific-1",
+      "description": "Topology, normals, UVs, scale, axes, PBR slots, LODs, and collision validate.",
+      "human_required": false
+    },
+    {
+      "id": "specific-2",
+      "description": "Triangle, texture-memory, draw-call, and load-time budgets pass.",
+      "human_required": false
+    }
+  ],
+  "fallbacks": [
+    "Use a conventional modeled placeholder when weights or output terms are unclear.",
+    "Decimate or retopologize a preserved copy instead of modifying the source."
+  ],
+  "provenance_outputs": [
+    "source-input-hashes.json",
+    "generation-settings.json",
+    "dependency-pins.json",
+    "quality-evidence/",
+    "human-approval.json"
+  ],
+  "mutation_policy": "plan-confirmed-digest-before-apply"
+}

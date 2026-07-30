@@ -1,0 +1,6 @@
+interface:
+  display_name: "Bug Triage"
+  short_description: "Read all open bugs in production/qa/bugs/, re-evaluate"
+  default_prompt: "Use $ai-game-studio:bug-triage to read all open bugs in production/qa/bugs/, re-evaluate for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

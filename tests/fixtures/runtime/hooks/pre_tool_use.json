@@ -1,0 +1,14 @@
+{
+  "session_id": "thr_fixture",
+  "turn_id": "turn_fixture",
+  "transcript_path": null,
+  "cwd": "__PROJECT__",
+  "hook_event_name": "PreToolUse",
+  "model": "gpt-fixture",
+  "permission_mode": "default",
+  "tool_name": "Bash",
+  "tool_use_id": "tool_fixture",
+  "tool_input": {
+    "command": "git push --force origin feature"
+  }
+}

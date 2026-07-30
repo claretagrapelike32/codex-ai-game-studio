@@ -1,0 +1,6 @@
+interface:
+  display_name: "Create Stories"
+  short_description: "Break a single epic into implementable story files. Reads"
+  default_prompt: "Use $ai-game-studio:create-stories to break a single epic into implementable story files. Reads for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

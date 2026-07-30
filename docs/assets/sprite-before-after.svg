@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800" role="img" aria-labelledby="title desc">
+  <title id="title">Sprite animation QA before and after fixture</title>
+  <desc id="desc">A deterministic synthetic four-frame sprite fixture showing variable baselines before validation and aligned baselines after correction, with measured alpha, padding, baseline, and loop results.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050914"/>
+      <stop offset="0.55" stop-color="#081226"/>
+      <stop offset="1" stop-color="#170c24"/>
+    </linearGradient>
+    <pattern id="checker" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="#14213d"/>
+      <rect width="8" height="8" fill="#1d2d50"/>
+      <rect x="8" y="8" width="8" height="8" fill="#1d2d50"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <g id="sprite">
+      <rect x="28" y="8" width="24" height="8" fill="#ffb347"/>
+      <rect x="20" y="16" width="40" height="8" fill="#ff6b6b"/>
+      <rect x="20" y="24" width="8" height="16" fill="#ffb347"/>
+      <rect x="28" y="24" width="24" height="16" fill="#f8d7b5"/>
+      <rect x="52" y="24" width="8" height="16" fill="#ffb347"/>
+      <rect x="28" y="28" width="6" height="6" fill="#071124"/>
+      <rect x="46" y="28" width="6" height="6" fill="#071124"/>
+      <rect x="28" y="40" width="24" height="8" fill="#f8d7b5"/>
+      <rect x="20" y="48" width="40" height="24" fill="#08c7f7"/>
+      <rect x="12" y="52" width="8" height="16" fill="#f8d7b5"/>
+      <rect x="60" y="52" width="8" height="16" fill="#f8d7b5"/>
+      <rect x="20" y="72" width="16" height="16" fill="#7c5cfc"/>
+      <rect x="44" y="72" width="16" height="16" fill="#7c5cfc"/>
+      <rect x="12" y="88" width="24" height="8" fill="#1b2742"/>
+      <rect x="44" y="88" width="24" height="8" fill="#1b2742"/>
+    </g>
+  </defs>
+
+  <rect width="1400" height="800" rx="28" fill="url(#bg)"/>
+  <text x="64" y="72" fill="#f8fbff" font-family="Inter,Segoe UI,sans-serif" font-size="34" font-weight="700">Deterministic sprite QA fixture</text>
+  <text x="64" y="108" fill="#91a7c6" font-family="Inter,Segoe UI,sans-serif" font-size="18">Transparent 96×112 frames · same pixels · baseline and loop alignment only</text>
+
+  <rect x="54" y="142" width="620" height="438" rx="22" fill="#0b1328" stroke="#ff6b6b" stroke-width="2"/>
+  <text x="82" y="188" fill="#ff8f8f" font-family="Inter,Segoe UI,sans-serif" font-size="24" font-weight="700">BEFORE · gate failed</text>
+  <text x="82" y="216" fill="#91a7c6" font-family="Inter,Segoe UI,sans-serif" font-size="15">Baseline variance: 3 px · loop seam: 4 px · bottom padding: inconsistent</text>
+
+  <rect x="82" y="246" width="128" height="184" rx="10" fill="url(#checker)"/>
+  <rect x="226" y="246" width="128" height="184" rx="10" fill="url(#checker)"/>
+  <rect x="370" y="246" width="128" height="184" rx="10" fill="url(#checker)"/>
+  <rect x="514" y="246" width="128" height="184" rx="10" fill="url(#checker)"/>
+  <use href="#sprite" x="106" y="292"/>
+  <use href="#sprite" x="250" y="297"/>
+  <use href="#sprite" x="394" y="289"/>
+  <use href="#sprite" x="538" y="295"/>
+  <line x1="82" y1="388" x2="210" y2="388" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="7 5"/>
+  <line x1="226" y1="393" x2="354" y2="393" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="7 5"/>
+  <line x1="370" y1="385" x2="498" y2="385" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="7 5"/>
+  <line x1="514" y1="391" x2="642" y2="391" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="138" y="458" fill="#91a7c6" font-family="ui-monospace,Consolas,monospace" font-size="14">F01 y=388</text>
+  <text x="282" y="458" fill="#91a7c6" font-family="ui-monospace,Consolas,monospace" font-size="14">F02 y=393</text>
+  <text x="426" y="458" fill="#91a7c6" font-family="ui-monospace,Consolas,monospace" font-size="14">F03 y=385</text>
+  <text x="570" y="458" fill="#91a7c6" font-family="ui-monospace,Consolas,monospace" font-size="14">F04 y=391</text>
+  <rect x="82" y="492" width="560" height="60" rx="10" fill="#261321"/>
+  <text x="104" y="529" fill="#ff8f8f" font-family="Inter,Segoe UI,sans-serif" font-size="18">✕ temporal alignment and seamless-loop gates blocked</text>
+
+  <rect x="726" y="142" width="620" height="438" rx="22" fill="#0b1328" stroke="#08c7f7" stroke-width="2"/>
+  <text x="754" y="188" fill="#5ee8ff" font-family="Inter,Segoe UI,sans-serif" font-size="24" font-weight="700">AFTER · candidate passed</text>
+  <text x="754" y="216" fill="#91a7c6" font-family="Inter,Segoe UI,sans-serif" font-size="15">Baseline variance: 0 px · loop seam: 0 px · bottom padding: 16 px</text>
+
+  <rect x="754" y="246" width="128" height="184" rx="10" fill="url(#checker)"/>
+  <rect x="898" y="246" width="128" height="184" rx="10" fill="url(#checker)"/>
+  <rect x="1042" y="246" width="128" height="184" rx="10" fill="url(#checker)"/>
+  <rect x="1186" y="246" width="128" height="184" rx="10" fill="url(#checker)"/>
+  <use href="#sprite" x="778" y="292"/>
+  <use href="#sprite" x="922" y="292"/>
+  <use href="#sprite" x="1066" y="292"/>
+  <use href="#sprite" x="1210" y="292"/>
+  <line x1="754" y1="388" x2="1314" y2="388" stroke="#08c7f7" stroke-width="2" filter="url(#glow)"/>
+  <text x="810" y="458" fill="#91a7c6" font-family="ui-monospace,Consolas,monospace" font-size="14">F01 y=388</text>
+  <text x="954" y="458" fill="#91a7c6" font-family="ui-monospace,Consolas,monospace" font-size="14">F02 y=388</text>
+  <text x="1098" y="458" fill="#91a7c6" font-family="ui-monospace,Consolas,monospace" font-size="14">F03 y=388</text>
+  <text x="1242" y="458" fill="#91a7c6" font-family="ui-monospace,Consolas,monospace" font-size="14">F04 y=388</text>
+  <rect x="754" y="492" width="560" height="60" rx="10" fill="#0b2a32"/>
+  <text x="776" y="529" fill="#5ee8ff" font-family="Inter,Segoe UI,sans-serif" font-size="18">✓ technical + temporal gates pass; human approval recorded</text>
+
+  <rect x="54" y="612" width="1292" height="130" rx="18" fill="#08101f" stroke="#263654"/>
+  <text x="82" y="650" fill="#f8fbff" font-family="Inter,Segoe UI,sans-serif" font-size="18" font-weight="700">Measured evidence</text>
+  <text x="82" y="686" fill="#91a7c6" font-family="ui-monospace,Consolas,monospace" font-size="16">alpha coverage 31.25% ✓   frame size 96×112 ✓   palette colors 8 ✓   pixel content changed 0 ✓</text>
+  <text x="82" y="716" fill="#91a7c6" font-family="ui-monospace,Consolas,monospace" font-size="16">baseline variance 3→0 px ✓   loop seam 4→0 px ✓   source preserved ✓   provenance fixture://sprite-baseline-v1</text>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "session_id": "thr_fixture",
+  "turn_id": "turn_fixture",
+  "transcript_path": null,
+  "cwd": "__PROJECT__",
+  "hook_event_name": "SubagentStart",
+  "model": "gpt-fixture",
+  "permission_mode": "default",
+  "agent_id": "agent_fixture",
+  "agent_type": "qa-tester"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Quality Enhance"
+  short_description: "Enhance assets with reversible QA gates"
+  default_prompt: "Use $ai-game-studio:quality-enhance to propose reversible improvements with preserved originals and before-and-after evidence."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,11 @@
+title: Codex AI Game Studio
+description: Plan, generate, validate, and ship games safely with Codex.
+url: https://frabcd.github.io
+baseurl: /codex-ai-game-studio
+theme: jekyll-theme-cayman
+repository: frabcd/codex-ai-game-studio
+show_downloads: true
+plugins:
+  - jekyll-seo-tag
+exclude:
+  - submission

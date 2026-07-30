@@ -1,0 +1,6 @@
+interface:
+  display_name: "Milestone Review"
+  short_description: "Generates a comprehensive milestone progress review"
+  default_prompt: "Use $ai-game-studio:milestone-review to generates a comprehensive milestone progress review for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

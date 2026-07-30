@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "ai-game-studio-pixel": {
+      "command": "python",
+      "args": [
+        "${PLUGIN_ROOT}/scripts/mcp_adapter.py",
+        "--pack",
+        "pixel"
+      ],
+      "env": {
+        "PYTHONUTF8": "1"
+      }
+    }
+  }
+}

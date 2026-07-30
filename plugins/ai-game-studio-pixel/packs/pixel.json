@@ -1,0 +1,95 @@
+{
+  "id": "pixel",
+  "plugin": "ai-game-studio-pixel",
+  "host_application": "Aseprite",
+  "supported_os": [
+    "Windows",
+    "Darwin",
+    "Linux"
+  ],
+  "supported_architectures": [
+    "amd64",
+    "x86_64",
+    "arm64",
+    "aarch64"
+  ],
+  "upstream": {
+    "repository": "willibrandon/pixel-mcp",
+    "url": "https://github.com/willibrandon/pixel-mcp",
+    "ref": "96e59ec7dfa828c241ad991287364d5b9f3fc79a",
+    "license": "MIT",
+    "verified_at": "2026-07-30"
+  },
+  "alternatives": [
+    {
+      "name": "Pixelorama",
+      "kind": "non-mcp-editor",
+      "active": false,
+      "selection_note": "Open-source pixel editor; use a file-based workflow rather than claiming MCP control."
+    },
+    {
+      "name": "Tiled",
+      "kind": "non-mcp-editor",
+      "active": false,
+      "selection_note": "Tile-map editor; use a file-based workflow rather than claiming sprite MCP control."
+    }
+  ],
+  "requirements": {
+    "host": "Aseprite or compatible sprite workflow",
+    "runtimes": [
+      "prebuilt or locally built pixel-mcp executable"
+    ],
+    "credentials": []
+  },
+  "permissions": [
+    "read and write selected sprite and tileset files",
+    "spawn a user-approved local MCP executable",
+    "run explicitly approved Aseprite commands",
+    "optional HTTPS download after confirmation"
+  ],
+  "health_checks": [
+    "validate project selection and executable SHA-256",
+    "confirm the sprite editor path",
+    "perform a read-only capability query"
+  ],
+  "uninstall": [
+    "plan pack disable pixel",
+    "remove the external binary only after separate confirmation"
+  ],
+  "rollback": [
+    "restore project.json and lock.json from the transaction backup",
+    "preserve and restore original sprite assets"
+  ],
+  "schema_version": 1,
+  "version": "1.0.0",
+  "distribution": "local-codex-marketplace",
+  "activation": {
+    "mode": "confirmed-transaction-only",
+    "project_state": ".ai-game-studio/project.json",
+    "lock_file": ".ai-game-studio/lock.json",
+    "single_server_per_host": true
+  },
+  "command_arguments": [
+    "--pack",
+    "pixel"
+  ],
+  "conflicts": [
+    "host:pixel"
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/willibrandon/pixel-mcp/archive/96e59ec7dfa828c241ad991287364d5b9f3fc79a.zip",
+      "ref": "96e59ec7dfa828c241ad991287364d5b9f3fc79a",
+      "automatic": false,
+      "expected_size_bytes": null,
+      "reason": "External source reference; download only after proposal confirmation and license review."
+    }
+  ],
+  "adapter": {
+    "transport": "stdio",
+    "launcher": "scripts/mcp_adapter.py",
+    "shell": false,
+    "external_executable_must_be_absolute": true,
+    "external_executable_sha256_required": true
+  }
+}

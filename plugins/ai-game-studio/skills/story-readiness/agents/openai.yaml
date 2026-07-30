@@ -1,0 +1,6 @@
+interface:
+  display_name: "Story Readiness"
+  short_description: "Validate that a story file is implementation-ready. Checks"
+  default_prompt: "Use $ai-game-studio:story-readiness to validate that a story file is implementation-ready. Checks for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

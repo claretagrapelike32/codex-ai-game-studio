@@ -1,0 +1,132 @@
+{
+  "description": "Optional Codex AI Game Studio lifecycle safeguards. Review and trust the exact definitions with /hooks before they run.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/hook_dispatch.py\" session-start",
+            "commandWindows": "py -3 \"%PLUGIN_ROOT%\\scripts\\hook_dispatch.py\" session-start",
+            "timeout": 10,
+            "statusMessage": "Inspecting game-studio context",
+            "additionalContextLimit": 1200
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/hook_dispatch.py\" subagent-start",
+            "commandWindows": "py -3 \"%PLUGIN_ROOT%\\scripts\\hook_dispatch.py\" subagent-start",
+            "timeout": 5,
+            "statusMessage": "Recording bounded subagent audit metadata",
+            "additionalContextLimit": 500
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/hook_dispatch.py\" subagent-stop",
+            "commandWindows": "py -3 \"%PLUGIN_ROOT%\\scripts\\hook_dispatch.py\" subagent-stop",
+            "timeout": 5,
+            "statusMessage": "Closing bounded subagent audit record"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "manual|auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/hook_dispatch.py\" pre-compact",
+            "commandWindows": "py -3 \"%PLUGIN_ROOT%\\scripts\\hook_dispatch.py\" pre-compact",
+            "timeout": 5,
+            "statusMessage": "Preserving transaction safety state"
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "matcher": "manual|auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/hook_dispatch.py\" post-compact",
+            "commandWindows": "py -3 \"%PLUGIN_ROOT%\\scripts\\hook_dispatch.py\" post-compact",
+            "timeout": 5,
+            "statusMessage": "Restoring transaction safety state",
+            "additionalContextLimit": 600
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/hook_dispatch.py\" pre-tool",
+            "commandWindows": "py -3 \"%PLUGIN_ROOT%\\scripts\\hook_dispatch.py\" pre-tool",
+            "timeout": 10,
+            "statusMessage": "Checking commit and push safeguards"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/hook_dispatch.py\" post-tool",
+            "commandWindows": "py -3 \"%PLUGIN_ROOT%\\scripts\\hook_dispatch.py\" post-tool",
+            "timeout": 15,
+            "statusMessage": "Validating changed game assets and skills",
+            "additionalContextLimit": 800
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/hook_dispatch.py\" stop",
+            "commandWindows": "py -3 \"%PLUGIN_ROOT%\\scripts\\hook_dispatch.py\" stop",
+            "timeout": 5,
+            "statusMessage": "Archiving session summary metadata"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "other",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/hook_dispatch.py\" session-end",
+            "commandWindows": "py -3 \"%PLUGIN_ROOT%\\scripts\\hook_dispatch.py\" session-end",
+            "timeout": 3,
+            "statusMessage": "Finalizing game-studio session metadata"
+          }
+        ]
+      }
+    ]
+  }
+}

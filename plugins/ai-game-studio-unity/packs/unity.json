@@ -1,0 +1,92 @@
+{
+  "id": "unity",
+  "plugin": "ai-game-studio-unity",
+  "host_application": "Unity Editor",
+  "supported_os": [
+    "Windows",
+    "Darwin",
+    "Linux"
+  ],
+  "supported_architectures": [
+    "amd64",
+    "x86_64",
+    "arm64",
+    "aarch64"
+  ],
+  "upstream": {
+    "repository": "CoplayDev/unity-mcp",
+    "url": "https://github.com/CoplayDev/unity-mcp",
+    "ref": "fc70dda75da27f97e9a012e77b6de86af40c044c",
+    "license": "MIT",
+    "verified_at": "2026-07-30"
+  },
+  "alternatives": [
+    {
+      "repository": "IvanMurzak/Unity-MCP",
+      "url": "https://github.com/IvanMurzak/Unity-MCP",
+      "ref": "f6db1c27e7f0d647dd3a127e2fff3a65c5785cc5",
+      "license": "Apache-2.0",
+      "active": false,
+      "selection_note": "Compare advanced editor tooling and deployment model before substitution."
+    }
+  ],
+  "requirements": {
+    "host": "Unity 2021.3 LTS through Unity 6.x",
+    "runtimes": [
+      "Python 3.10+",
+      "uv when using the upstream Python server"
+    ],
+    "credentials": []
+  },
+  "permissions": [
+    "read and write the selected Unity project",
+    "spawn a user-approved local MCP executable",
+    "open localhost editor IPC",
+    "optional HTTPS download after confirmation"
+  ],
+  "health_checks": [
+    "validate project selection and executable SHA-256",
+    "confirm Unity project version",
+    "perform a read-only MCP ping after the user starts Unity"
+  ],
+  "uninstall": [
+    "plan pack disable unity",
+    "disable/remove the Unity editor package only after separate confirmation"
+  ],
+  "rollback": [
+    "restore project.json and lock.json from the transaction backup",
+    "restore any replaced host selection"
+  ],
+  "schema_version": 1,
+  "version": "1.0.0",
+  "distribution": "local-codex-marketplace",
+  "activation": {
+    "mode": "confirmed-transaction-only",
+    "project_state": ".ai-game-studio/project.json",
+    "lock_file": ".ai-game-studio/lock.json",
+    "single_server_per_host": true
+  },
+  "command_arguments": [
+    "--pack",
+    "unity"
+  ],
+  "conflicts": [
+    "host:unity"
+  ],
+  "downloads": [
+    {
+      "url": "https://github.com/CoplayDev/unity-mcp/archive/fc70dda75da27f97e9a012e77b6de86af40c044c.zip",
+      "ref": "fc70dda75da27f97e9a012e77b6de86af40c044c",
+      "automatic": false,
+      "expected_size_bytes": null,
+      "reason": "External source reference; download only after proposal confirmation and license review."
+    }
+  ],
+  "adapter": {
+    "transport": "stdio",
+    "launcher": "scripts/mcp_adapter.py",
+    "shell": false,
+    "external_executable_must_be_absolute": true,
+    "external_executable_sha256_required": true
+  }
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Team Qa"
+  short_description: "Orchestrate the QA team through a full testing cycle."
+  default_prompt: "Use $ai-game-studio:team-qa to orchestrate the QA team through a full testing cycle. for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

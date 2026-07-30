@@ -1,0 +1,110 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "prompt-to-game",
+  "title": "Prompt to playable vertical slice",
+  "description": "A reversible, evidence-producing workflow for prompt to playable vertical slice.",
+  "inputs": [
+    "game_brief",
+    "target_engine",
+    "target_platform",
+    "scope_budget"
+  ],
+  "ordered_stages": [
+    {
+      "order": 1,
+      "id": "brief",
+      "action": "Turn the prompt into testable pillars, constraints, and a minimal playable loop."
+    },
+    {
+      "order": 2,
+      "id": "prototype",
+      "action": "Create the smallest reversible implementation using placeholders first."
+    },
+    {
+      "order": 3,
+      "id": "integrate",
+      "action": "Integrate generated assets only after format and provenance checks."
+    },
+    {
+      "order": 4,
+      "id": "playtest",
+      "action": "Run deterministic smoke checks and representative player journeys."
+    },
+    {
+      "order": 5,
+      "id": "review",
+      "action": "Present build evidence and request human approval for the vertical slice."
+    }
+  ],
+  "required_capabilities": [
+    "prompt-to-game",
+    "engine-control",
+    "playtesting"
+  ],
+  "expected_artifacts": [
+    "game-brief.md",
+    "vertical-slice/",
+    "playtest-report.json",
+    "screenshots/"
+  ],
+  "quality_gates": [
+    {
+      "id": "rights",
+      "description": "Verify rights, consent, code, weights, datasets, output terms, and generation provenance.",
+      "human_required": true
+    },
+    {
+      "id": "technical-format",
+      "description": "Validate formats and domain-specific technical constraints.",
+      "human_required": false
+    },
+    {
+      "id": "visual-temporal",
+      "description": "Check visual identity and temporal consistency across relevant views and frames.",
+      "human_required": false
+    },
+    {
+      "id": "runtime-budget",
+      "description": "Check memory, frame time, draw calls, load time, and asset budgets.",
+      "human_required": false
+    },
+    {
+      "id": "playability",
+      "description": "Run interaction and playability smoke tests in the target runtime.",
+      "human_required": false
+    },
+    {
+      "id": "regression-evidence",
+      "description": "Store screenshots, artifacts, logs, versions, and comparison evidence.",
+      "human_required": false
+    },
+    {
+      "id": "human-approval",
+      "description": "Require human approval before replacing any source or production asset.",
+      "human_required": true
+    },
+    {
+      "id": "specific-1",
+      "description": "The core loop must be playable in a clean build.",
+      "human_required": false
+    },
+    {
+      "id": "specific-2",
+      "description": "Generated assets must not silently replace source assets.",
+      "human_required": false
+    }
+  ],
+  "fallbacks": [
+    "Reduce scope to one mechanic and one level.",
+    "Keep placeholder art when generation rights or quality are unresolved."
+  ],
+  "provenance_outputs": [
+    "source-input-hashes.json",
+    "generation-settings.json",
+    "dependency-pins.json",
+    "quality-evidence/",
+    "human-approval.json"
+  ],
+  "mutation_policy": "plan-confirmed-digest-before-apply"
+}

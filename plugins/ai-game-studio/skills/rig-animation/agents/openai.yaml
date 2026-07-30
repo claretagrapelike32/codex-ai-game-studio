@@ -1,0 +1,6 @@
+interface:
+  display_name: "Rig Animation"
+  short_description: "Rig and validate character animation"
+  default_prompt: "Use $ai-game-studio:rig-animation to rig or retarget this character and verify deformation, contacts, and loops."
+policy:
+  allow_implicit_invocation: true

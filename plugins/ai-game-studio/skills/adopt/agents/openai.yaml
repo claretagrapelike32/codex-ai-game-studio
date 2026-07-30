@@ -1,0 +1,6 @@
+interface:
+  display_name: "Adopt"
+  short_description: "Brownfield onboarding — audits existing project artifacts"
+  default_prompt: "Use $ai-game-studio:adopt to brownfield onboarding — audits existing project artifacts for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

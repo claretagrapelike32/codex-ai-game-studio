@@ -1,0 +1,6 @@
+interface:
+  display_name: "Scope Check"
+  short_description: "Analyze a feature or sprint for scope creep by comparing"
+  default_prompt: "Use $ai-game-studio:scope-check to analyze a feature or sprint for scope creep by comparing for this project and report evidence."
+policy:
+  allow_implicit_invocation: true

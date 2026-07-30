@@ -1,0 +1,6 @@
+interface:
+  display_name: "Set up Unreal MCP"
+  short_description: "Propose one pinned Unreal adapter"
+  default_prompt: "Use $ai-game-studio-unreal:setup-unreal to inspect this Unreal project and propose one compatible pinned MCP adapter with its high-trust permissions."
+policy:
+  allow_implicit_invocation: false

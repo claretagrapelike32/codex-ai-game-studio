@@ -1,0 +1,29 @@
+{
+  "name": "ai-game-studio-blender",
+  "version": "1.0.0",
+  "description": "An opt-in, pinned Blender MCP adapter and safety workflow for Codex AI Game Studio.",
+  "author": {"name": "frabcd", "url": "https://github.com/frabcd"},
+  "homepage": "https://frabcd.github.io/codex-ai-game-studio/packs/blender/",
+  "repository": "https://github.com/frabcd/codex-ai-game-studio",
+  "license": "MIT",
+  "keywords": ["blender", "mcp", "3d-assets", "codex"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "AI Game Studio · Blender",
+    "shortDescription": "Plan and operate one pinned Blender MCP safely.",
+    "longDescription": "Detects Blender, plans the ahujasid Blender MCP adapter, checks conflicts and permissions, and requires confirmation before setup or scene writes.",
+    "developerName": "frabcd",
+    "category": "Developer Tools",
+    "capabilities": ["Blender detection", "Pinned Blender MCP routing", "3D workflow health checks and rollback"],
+    "websiteURL": "https://frabcd.github.io/codex-ai-game-studio/packs/blender/",
+    "privacyPolicyURL": "https://frabcd.github.io/codex-ai-game-studio/privacy/",
+    "termsOfServiceURL": "https://frabcd.github.io/codex-ai-game-studio/terms/",
+    "brandColor": "#7C5CFC",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "logoDark": "./assets/icon.png",
+    "screenshots": [],
+    "defaultPrompt": "Use $ai-game-studio-blender:setup-blender to inspect this Blender workflow and propose a pinned, reversible integration without changing anything yet."
+  }
+}

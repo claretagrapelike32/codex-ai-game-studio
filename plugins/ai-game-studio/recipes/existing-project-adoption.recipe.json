@@ -1,0 +1,110 @@
+{
+  "$schema": "https://frabcd.github.io/codex-ai-game-studio/schemas/recipe.schema.json",
+  "schema_version": "1.0.0",
+  "id": "existing-project-adoption",
+  "title": "Adopt the studio workflows in an existing game",
+  "description": "A reversible, evidence-producing workflow for adopt the studio workflows in an existing game.",
+  "inputs": [
+    "project_path",
+    "team_constraints",
+    "target_workflows",
+    "commercial_intent"
+  ],
+  "ordered_stages": [
+    {
+      "order": 1,
+      "id": "inventory",
+      "action": "Read project structure, conventions, generated files, tools, and repository state."
+    },
+    {
+      "order": 2,
+      "id": "gaps",
+      "action": "Map requested workflows to existing capabilities without replacing working tools."
+    },
+    {
+      "order": 3,
+      "id": "proposal",
+      "action": "Show one scoped setup, exact generated files, conflicts, permissions, and rollback."
+    },
+    {
+      "order": 4,
+      "id": "confirm",
+      "action": "Wait for explicit confirmation of the transaction digest."
+    },
+    {
+      "order": 5,
+      "id": "validate",
+      "action": "Apply approved additions and prove that build, tests, and rollback still work."
+    }
+  ],
+  "required_capabilities": [
+    "studio-workflows",
+    "tool-discovery",
+    "engine-control"
+  ],
+  "expected_artifacts": [
+    "project-inventory.json",
+    "gap-analysis.md",
+    "transaction-plan.json",
+    "adoption-report.json"
+  ],
+  "quality_gates": [
+    {
+      "id": "rights",
+      "description": "Verify rights, consent, code, weights, datasets, output terms, and generation provenance.",
+      "human_required": true
+    },
+    {
+      "id": "technical-format",
+      "description": "Validate formats and domain-specific technical constraints.",
+      "human_required": false
+    },
+    {
+      "id": "visual-temporal",
+      "description": "Check visual identity and temporal consistency across relevant views and frames.",
+      "human_required": false
+    },
+    {
+      "id": "runtime-budget",
+      "description": "Check memory, frame time, draw calls, load time, and asset budgets.",
+      "human_required": false
+    },
+    {
+      "id": "playability",
+      "description": "Run interaction and playability smoke tests in the target runtime.",
+      "human_required": false
+    },
+    {
+      "id": "regression-evidence",
+      "description": "Store screenshots, artifacts, logs, versions, and comparison evidence.",
+      "human_required": false
+    },
+    {
+      "id": "human-approval",
+      "description": "Require human approval before replacing any source or production asset.",
+      "human_required": true
+    },
+    {
+      "id": "specific-1",
+      "description": "Existing project conventions and unrelated changes remain intact.",
+      "human_required": false
+    },
+    {
+      "id": "specific-2",
+      "description": "New automation can be disabled and rolled back without damaging project state.",
+      "human_required": false
+    }
+  ],
+  "fallbacks": [
+    "Use the core skills without editor automation.",
+    "Adopt one workflow at a time when conflicts cannot be resolved safely."
+  ],
+  "provenance_outputs": [
+    "source-input-hashes.json",
+    "generation-settings.json",
+    "dependency-pins.json",
+    "quality-evidence/",
+    "human-approval.json"
+  ],
+  "mutation_policy": "plan-confirmed-digest-before-apply"
+}

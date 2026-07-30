@@ -1,0 +1,6 @@
+interface:
+  display_name: "Set up pixel-art tools"
+  short_description: "Propose pinned pixel tooling safely"
+  default_prompt: "Use $ai-game-studio-pixel:setup-pixel to inspect this 2D game project and propose one pinned pixel-art adapter or a verified non-MCP alternative."
+policy:
+  allow_implicit_invocation: false

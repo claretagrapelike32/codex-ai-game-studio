@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "ai-game-studio-godot": {
+      "command": "python",
+      "args": [
+        "${PLUGIN_ROOT}/scripts/mcp_adapter.py",
+        "--pack",
+        "godot"
+      ],
+      "env": {
+        "PYTHONUTF8": "1"
+      }
+    }
+  }
+}

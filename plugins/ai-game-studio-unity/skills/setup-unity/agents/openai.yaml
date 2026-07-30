@@ -1,0 +1,6 @@
+interface:
+  display_name: "Set up Unity MCP"
+  short_description: "Propose one pinned Unity adapter"
+  default_prompt: "Use $ai-game-studio-unity:setup-unity to inspect this Unity project and propose one compatible pinned MCP adapter."
+policy:
+  allow_implicit_invocation: false
