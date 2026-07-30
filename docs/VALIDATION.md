@@ -57,6 +57,7 @@ pluginId: ai-game-studio@frabcd-ai-game-studio
 version: 1.0.0
 enabled: true
 skillCount: 85
+explicitInvocation: AI_GAME_STUDIO_START_LOADED
 cleanup marketplacePresent: false
 cleanup pluginPresent: false
 ```

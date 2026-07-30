@@ -24,6 +24,6 @@
     "logo": "./assets/icon.png",
     "logoDark": "./assets/icon.png",
     "screenshots": [],
-    "defaultPrompt": "Use $ai-game-studio-godot:setup-godot to inspect this Godot project and propose a pinned, reversible integration without changing anything yet."
+    "defaultPrompt": "Use $ai-game-studio-godot:setup-godot to inspect this Godot project and propose a pinned setup. Do not change anything yet."
   }
 }

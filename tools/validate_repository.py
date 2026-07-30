@@ -225,6 +225,15 @@ class Validator:
             for key in ("displayName", "shortDescription", "developerName", "category"):
                 if not isinstance(interface.get(key), str) or not interface[key].strip():
                     self.error("plugin-interface", manifest_path, f"interface.{key} is required")
+            default_prompt = interface.get("defaultPrompt")
+            if not isinstance(default_prompt, str) or not default_prompt.strip():
+                self.error("plugin-interface", manifest_path, "interface.defaultPrompt is required")
+            elif len(default_prompt) > 128:
+                self.error(
+                    "plugin-interface",
+                    manifest_path,
+                    f"interface.defaultPrompt must be at most 128 characters, found {len(default_prompt)}",
+                )
             self._validate_manifest_assets(plugin_dir, manifest_path, manifest)
 
         marketplace_path = self.root / ".agents" / "plugins" / "marketplace.json"
