@@ -18,8 +18,9 @@ class PagesBuilderTests(unittest.TestCase):
 
     def test_pages_include_legal_and_support_routes(self) -> None:
         with tempfile.TemporaryDirectory(prefix="ags-pages-") as temporary:
-            written = build(ROOT, Path(temporary))
-            relative = {path.relative_to(Path(temporary)).as_posix() for path in written}
+            output_root = Path(temporary).resolve()
+            written = build(ROOT, output_root)
+            relative = {path.relative_to(output_root).as_posix() for path in written}
             for expected in (
                 "index.html",
                 "privacy/index.html",
